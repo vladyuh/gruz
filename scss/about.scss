@@ -1,0 +1,88 @@
+.about-detail {
+  padding-top: 14px;
+
+  .block-desc {
+    margin-top: 0;
+  }
+}
+
+.about-advantages {
+  .advantages-items {
+    padding-top: 0;
+  }
+}
+
+.about-text {
+  padding-top: 65px;
+  padding-bottom: 80px;
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .left,
+  .right {
+    width: 552px / 1200px * 100%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #808080;
+  }
+
+
+}
+
+@media screen and (max-width: 1000px) {
+
+
+  .about-detail {
+    background-size: 45%;
+    background-position-x: left;
+    background-position-y: top;
+  }
+
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .about-text {
+    padding-top: 35px;
+    padding-bottom: 60px;
+
+    .left,
+    .right {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  .about-detail {
+    background-position: left 0px;
+    background-size: 60%;
+  }
+
+}
+
+
+@media screen and (max-width: 400px) {
+
+  .about-text {
+
+    .left,
+    .right {
+      font-size: 13px;
+    }
+
+  }
+
+}

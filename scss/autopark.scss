@@ -1,0 +1,133 @@
+.autopark-detail {
+    padding-top: 0;
+
+    .head {
+        width: 100%;
+        margin-bottom: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .autopark-detail--items {
+        display: flex;
+        width: calc(100% + 40px);
+        flex-wrap: wrap;
+        margin: 0 -20px;
+    }
+
+    .item {
+        width: calc(100% / 4 - 40px);
+        margin: 0 20px;
+        margin-bottom: 40px;
+    }
+
+    .filter {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        flex-wrap: wrap;
+
+        .custom-checkbox {
+            margin-right: 23px;
+        }
+
+    }
+
+
+}
+
+@media screen and (max-width: 1110px) {
+
+    .autopark-detail {
+
+
+        .autopark-detail--items {
+            display: flex;
+            width: calc(100% + 20px);
+            flex-wrap: wrap;
+            margin: 0 -10px;
+        }
+
+        .item {
+            width: calc(100% / 4 - 20px);
+            margin: 0 10px;
+            margin-bottom: 20px;
+        }
+
+
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .autopark-detail {
+
+        .item {
+            width: calc(100% / 3 - 20px);
+            margin: 0 10px;
+            margin-bottom: 20px;
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .autopark-detail .filter {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 25px;
+    }
+
+}
+
+@media screen and (max-width: 830px) {
+
+    .autopark-detail {
+
+
+
+        .item {
+            width: calc(100% / 2 - 20px);
+            margin: 0 10px;
+            margin-bottom: 20px;
+        }
+
+
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .autopark-detail {
+
+        .autopark-detail--items {
+            margin: 0;
+            width: 100%;
+        }
+
+        .item {
+            width: calc(100%);
+            margin: 0px;
+            margin-bottom: 20px;
+        }
+
+
+    }
+
+}
+
+@media screen and (max-width: 480px) {}
+
+@media screen and (max-width: 375px) {
+
+    .autopark-detail .section-tabs svg {
+        display: none !important;
+    }
+
+
+}

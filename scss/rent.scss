@@ -1,0 +1,102 @@
+.rent {
+    padding-top: 0;
+
+    .head {
+        width: 100%;
+        margin-bottom: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .rent-items {
+        display: flex;
+        width: calc(100% + 40px);
+        flex-wrap: wrap;
+        margin: 0 -20px;
+    }
+
+    .item {
+        width: calc(100% / 4 - 40px);
+        margin: 0 20px;
+        margin-bottom: 40px;
+    }
+
+
+}
+
+@media screen and (max-width: 1110px) {
+
+    .rent {
+
+        .rent-items {
+            display: flex;
+            width: calc(100% + 20px);
+            flex-wrap: wrap;
+            margin: 0 -10px;
+        }
+
+        .item {
+            width: calc(100% / 4 - 20px);
+            margin: 0 10px;
+            margin-bottom: 20px;
+        }
+
+
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .rent {
+
+        .item {
+            width: calc(100% / 3 - 20px);
+            margin: 0 10px;
+            margin-bottom: 20px;
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 830px) {
+
+    .rent {
+
+        .item {
+            width: calc(100% / 2 - 20px);
+            margin: 0 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .rent {
+
+        .rent-items {
+            margin: 0;
+            width: 100%;
+        }
+
+        .item {
+            width: calc(100%);
+            margin: 0px;
+            margin-bottom: 20px;
+        }
+
+
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    .rent .section-tabs .ic.spec-vehicle {
+        display: none;
+    }
+}

@@ -1,0 +1,384 @@
+.ic {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.ic.route {
+    width: 70px;
+    height: 70px;
+    background-image: url(../img/icons/svg/ic_route_70.svg);
+}
+
+.ic.delivery {
+    width: 70px;
+    height: 70px;
+    background-image: url(../img/icons/svg/ic_delivery_70.svg);
+}
+
+.ic.truck {
+    width: 70px;
+    height: 70px;
+    background-image: url(../img/icons/svg/ic_truck_70.svg);
+}
+
+.ic.location {
+    width: 70px;
+    height: 70px;
+    background-image: url(../img/icons/svg/ic_location_70.svg);
+}
+
+.ic.cars {
+    width: 35px;
+    height: 35px;
+    background-image: url(../img/icons/svg/ic_cars.svg);
+}
+
+.ic.cliens {
+    width: 35px;
+    height: 35px;
+    background-image: url(../img/icons/svg/ic_cliens.svg);
+}
+
+.ic.flag {
+    width: 35px;
+    height: 35px;
+    background-image: url(../img/icons/svg/ic_flag.svg);
+}
+
+.ic.orders {
+    width: 35px;
+    height: 35px;
+    background-image: url(../img/icons/svg/ic_orders.svg);
+}
+
+.ic.next {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icons/svg/ic_next.svg);
+}
+
+.ic.prev {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icons/svg/ic_prev.svg);
+}
+
+.ic.lock {
+    height: 20px;
+    width: 15px;
+    background-image: url(../img/icons/svg/ic_lock.svg);
+}
+
+.ic.plus {
+    width: 8px;
+    height: 17px;
+    background-image: url(../img/icons/svg/ic_plus.svg);
+}
+
+.ic.minus {
+    width: 8px;
+    height: 17px;
+    background-image: url(../img/icons/svg/ic_minus.svg);
+}
+
+.ic.more {
+    width: 9px;
+    height: 9px;
+    background-image: url(../img/icons/svg/ic_more.svg);
+}
+
+.ic.group {
+    width: 19px;
+    height: 19px;
+    background-image: url(../img/icons/svg/ic_group.svg);
+}
+
+.ic.close {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/icons/svg/close-white-48dp.svg);
+}
+
+.ic.info {
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/icons/svg/ic_info-14.svg);
+}
+
+.ic.info-g {
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/icons/svg/ic_info-g.svg);
+}
+
+.ic.car-1 {
+    width: 40px;
+    height: 33px;
+    background-image: url(../img/icons/cars/car-1.svg);
+}
+
+.ic.car-2 {
+    width: 40px;
+    height: 33px;
+    background-image: url(../img/icons/cars/car-2.svg);
+}
+
+.ic.car-3 {
+    width: 40px;
+    height: 33px;
+    background-image: url(../img/icons/cars/car-3.svg);
+}
+
+.ic.car-4 {
+    width: 40px;
+    height: 33px;
+    background-image: url(../img/icons/cars/car-4.svg);
+}
+
+.ic.car-5 {
+    width: 40px;
+    height: 33px;
+    background-image: url(../img/icons/cars/car-5.svg);
+}
+
+.ic.car-6 {
+    width: 40px;
+    height: 33px;
+    background-image: url(../img/icons/cars/car-6.svg);
+}
+
+.ic.car-7 {
+    width: 40px;
+    height: 33px;
+    background-image: url(../img/icons/cars/car-7.svg);
+}
+
+.ic.car-8 {
+    width: 40px;
+    height: 33px;
+    background-image: url(../img/icons/cars/car-8.svg);
+}
+
+.ic.pallets {
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/icons/svg/ic_pallets.svg);
+}
+
+.ic.arrow-down {
+    width: 12px;
+    height: 8px;
+    background-image: url(../img/icons/svg/ic_arrow-down.svg);
+}
+
+.ic.spec-vehicle {
+    width: 25.33px;
+    height: 14.27px;
+    background-image: url(../img/icons/svg/ic_spec-vehicle.svg);
+}
+
+.ic.movement {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/icons/svg/ic_movement.svg);
+}
+
+.ic.taxi {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/icons/svg/ic_taxi.svg);
+}
+
+.ic.temperature {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/icons/svg/ic_temperature.svg);
+}
+
+.ic.box {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/icons/svg/ic_box.svg);
+}
+
+.ic.evacuation {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/icons/svg/ic_evacuation.svg);
+}
+
+.ic.office {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/icons/svg/ic_office.svg);
+}
+
+.ic.outsource {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/icons/svg/ic_outsource.svg);
+}
+
+.ic.banks {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/icons/svg/ic_banks.svg);
+}
+
+
+.ic.tonnage {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/icons/svg/ic_tonnage.svg);
+}
+
+.ic.grouped {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/icons/svg/ic_grouped.svg);
+}
+
+.ic.individual {
+    width: 26px;
+    height: 26px;
+    background-image: url(../img/icons/svg/ic_individual.svg);
+}
+
+.ic.entity {
+    width: 26px;
+    height: 26px;
+    background-image: url(../img/icons/svg/ic_entity.svg);
+}
+
+.ic.transporter {
+    width: 29px;
+    height: 24px;
+    background-image: url(../img/icons/svg/ic_transporter.svg);
+}
+
+.ic.files {
+    width: 24.85px;
+    height: 30px;
+    background-image: url(../img/icons/svg/ic_files.svg);
+}
+
+.ic.images {
+    width: 25.71px;
+    height: 30px;
+    background-image: url(../img/icons/svg/ic_images.svg);
+}
+
+.ic.add-option {
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/icons/svg/ic_add.svg);
+}
+
+.ic.remove-option {
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/icons/svg/ic_remove.svg);
+}
+
+.active .ic.person {
+    background-image: url(../img/icons/svg/ic_person-active.svg);
+}
+
+.ic.person {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icons/svg/ic_person.svg);
+}
+
+.active .ic.order {
+    background-image: url(../img/icons/svg/ic_order-active.svg);
+}
+
+.ic.order {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icons/svg/ic_order.svg);
+}
+
+.ic.exit {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icons/svg/ic_exit.svg);
+}
+
+.ic.edit {
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/icons/svg/ic_edit.svg);
+}
+
+.ic.star {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icons/svg/ic_star.svg);
+}
+
+.ic.sort {
+    width: 13px;
+    height: 6.5px;
+    background-image: url(../img/icons/svg/ic_sort.svg);
+}
+
+.ic.calc {
+    width: 19.68px;
+    height: 23px;
+    background-image: url(../img/icons/svg/ic_calc.svg);
+}
+
+.ic.back {
+    width: 13.81px;
+    height: 9.65px;
+    background-image: url(../img/icons/svg/ic_back.svg);
+}
+
+.ic.ready {
+    background: #00982F;
+    width: 10.19px;
+    height: 10.19px;
+    border-radius: 50%;
+}
+
+.ic.photos {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/icons/svg/ic_photos.svg);
+    background-size: 20px;
+}
+
+.ic.check {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/icons/svg/ic_check.svg);
+    background-size: 20px;
+    background-position: center;
+}
+
+.ic.arrow-forward {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/icons/svg/ic_arrow-forward.svg);
+    background-size: 17px;
+}
+
+.ic.cancel {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/icons/svg/ic_cancel.svg);
+    background-size: 15px;
+}
+
+.ic.rating-star {
+    width: 30px;
+    height: 28.88px;
+    background-image: url(../img/icons/svg/ic_rate.svg);
+}
