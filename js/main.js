@@ -10,7 +10,8 @@ $(document).ready(function () {
     arrows: false,
     dots: true,
     appendDots: $(".autopark .slider-nav .dots"),
-    responsive: [{
+    responsive: [
+      {
         breakpoint: 1111,
         settings: {
           slidesToShow: 3,
@@ -58,7 +59,8 @@ $(document).ready(function () {
 
   $(".ic.minus").on("click", function () {
     var old = $(this).parents(".input-box").find('input[type="number"]').val();
-    if (old == 0) {} else {
+    if (old == 0) {
+    } else {
       $(this)
         .parents(".input-box")
         .find('input[type="number"]')
@@ -251,10 +253,12 @@ $(document).ready(function () {
           controls: [],
         }),
         myPlacemark = new ymaps.Placemark(
-          [53.912107, 30.319875], {
+          [53.912107, 30.319875],
+          {
             hintContent: "",
             balloonContent: "",
-          }, {
+          },
+          {
             iconLayout: "default#image",
             iconImageHref: "../img/map-marker.png",
             iconImageSize: [30, 40],
@@ -297,7 +301,8 @@ $(document).ready(function () {
 
       if (Math.abs(lastScrollTop - st) <= delta) return;
 
-      if ($(".header-content__m--menu").hasClass("open")) {} else {
+      if ($(".header-content__m--menu").hasClass("open")) {
+      } else {
         if (st > lastScrollTop && st > navbarHeight) {
           $("header").removeClass("nav-down").addClass("nav-up");
         } else {
@@ -358,16 +363,15 @@ $(document).ready(function () {
   //rating
   $(".rating input:radio").attr("checked", false);
 
-  $('.rating input').click(function () {
-    $(".rating span").removeClass('checked');
-    $(this).parent().addClass('checked');
+  $(".rating input").click(function () {
+    $(".rating span").removeClass("checked");
+    $(this).parent().addClass("checked");
   });
 
-  $('input:radio').change(
-    function () {
-      var userRating = this.value;
-      /* alert(userRating); */
-    });
+  $("input:radio").change(function () {
+    var userRating = this.value;
+    /* alert(userRating); */
+  });
 
   /* $fileInput.on("change", function () {
     var filesCount = $(this)[0].files.length;
@@ -390,10 +394,11 @@ $(document).ready(function () {
   //photos preview
   var imagesPreview = function (input, placeToInsertImagePreview) {
     if (input.files) {
-
-      $(placeToInsertImagePreview).find('img').each(function () {
-        $(this).remove();
-      });
+      $(placeToInsertImagePreview)
+        .find("img")
+        .each(function () {
+          $(this).remove();
+        });
 
       console.log(input.files);
 
@@ -402,35 +407,65 @@ $(document).ready(function () {
         var reader = new FileReader();
 
         reader.onload = function (event) {
-          $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
-        }
+          $($.parseHTML("<img>"))
+            .attr("src", event.target.result)
+            .appendTo(placeToInsertImagePreview);
+        };
 
         reader.readAsDataURL(input.files[i]);
       }
-
     }
   };
 
-  $('#gallery-photo-add').on('change', function () {
+  $("#gallery-photo-add").on("change", function () {
     if (this.files.length < 5) {
-      imagesPreview(this, '.attach-images__preview');
-
+      imagesPreview(this, ".attach-images__preview");
     } else {
-      alert('Можно прикрепить только 4 файла')
+      alert("Можно прикрепить только 4 файла");
     }
-
   });
 
-  $(document).on('click', '.attach-images__preview img', function () {
-    var input = $(this).parents('form').find('.attach-images input[type="file"]');
-    console.log(input.prop('files')[$(this).index()]);
+  $(document).on("click", ".attach-images__preview img", function () {
+    var input = $(this)
+      .parents("form")
+      .find('.attach-images input[type="file"]');
+    console.log(input.prop("files")[$(this).index()]);
 
-    console.log(input.prop('files').length);
+    console.log(input.prop("files").length);
 
     delete input.files[0];
 
-    console.log(input.prop('files').length);
+    console.log(input.prop("files").length);
+  });
 
+  $("#services-toggle").mouseenter(function () {
+    $(".header-services__list").slideDown();
+  });
+
+  $(".header-services__list").mouseleave(function () {
+    $(this).slideUp();
+  });
+
+  var uls = $(".header-mobile--nav > ul > li").has("ul");
+  console.log(uls);
+
+  $(".header-mobile--nav ul > li").each(function () {
+    if ($(this).children("ul").length > 0) {
+      $(this).prepend('<span class="ic more"></span>');
+    }
+  });
+
+  $(".header-mobile--nav ul.nav > li > span.ic").click(function () {
+    $(this).parents("ul.nav > li").find("ul.categories").slideToggle();
+    $(this).toggleClass("active");
+  });
+
+  $(".header-mobile--nav ul.categories > li > span.ic").click(function () {
+    $(this)
+      .parents("ul.categories > li")
+      .find("ul.subcategories")
+      .slideToggle();
+    $(this).toggleClass("active");
   });
 
   if ($("#order-map").length != 0) {
@@ -455,7 +490,8 @@ $(document).ready(function () {
       });
 
       // Создание экземпляра маршрута.
-      multiRoute = new ymaps.multiRouter.MultiRoute({
+      multiRoute = new ymaps.multiRouter.MultiRoute(
+        {
           // Точки маршрута.
           // Обязательное поле.
           referencePoints: referencePoints,

@@ -631,7 +631,9 @@
         a.done,
         a.abort,
         a.add-photos,
-        a.in-road {
+        a.in-road,
+        a.rate,
+        a.about-order {
             width: auto;
             border-radius: 0;
             margin: 0;
@@ -654,7 +656,9 @@
             }
         }
 
-        a.add-photos {
+        a.add-photos,
+        a.rate,
+        a.about-order {
             border: 2px solid #A9A9A9;
 
 
@@ -663,7 +667,8 @@
             }
         }
 
-        a.abort p {
+        a.abort p,
+            {
             color: #A9A9A9;
         }
 

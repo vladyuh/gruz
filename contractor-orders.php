@@ -121,7 +121,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="table__row">
+                            <div class="table__row active">
                                 <div class="table__cell number" data-title="#">645 767 346</div>
                                 <div class="table__cell from" data-title="Откуда"> г.Минск, ул. Ленина, д. 43</div>
                                 <div class="table__cell to" data-title="Куда">д. Зайцево, пер. Майский, д. 32</div>
@@ -260,9 +260,10 @@
                                 <div class="table__cell cost" data-title="Сумма заказа">3846</div>
                                 <div class="table__cell buttons">
                                     <div class="table__cell-content">
-                                        <span class="ic star">
-                                            <a href="#rate" data-fancybox></a>
-                                        </span>
+                                    <a href="#rate" data-fancybox="" class="rate">
+                                            <span class="ic star"></span>
+                                            <p>Оценить</p>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

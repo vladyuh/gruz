@@ -20,7 +20,7 @@
                             <div class="banner-desc"> Перевозка любых грузов от двери до двери</div>
                             <div class="banner-btns">
                                 <a href="#callback" data-fancybox class="flat-btn yellow">Оставить заявку</a>
-                                <a href="#" class="flat-btn yellow-outline">Рассчитать груз</a>
+                                <a href="#calc" class="flat-btn yellow-outline">Рассчитать груз</a>
                             </div>
                         </div>
                         <div class="content-right">
@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <div class="calculate">
+        <div class="calculate" id="calc">
             <div class="wrapper">
                 <div class="inner">
                     <a href="#calculate" data-fancybox class="calculate-toggle">

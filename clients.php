@@ -24,7 +24,7 @@
                 <div class="inner">
                     <ul>
                         <li><a href="/">Главная</a></li>
-                        <li><a href="clients.php">Корпоративным клиентам</a></li>
+                        <li><a href="clients.php">Юридическим лицам</a></li>
                     </ul>
                 </div>
             </div>
@@ -69,10 +69,6 @@
                                     <label for="#name">Имя</label>
                                     <input type="text" name="name" id="name">
                                 </div>
-                                <div class="fields-item">
-                                    <label for="#name">ИНН</label>
-                                    <input type="text" name="i-number" id="i-number">
-                                </div>
                             </div>
                         </div>
                         <div class="column">
@@ -80,10 +76,6 @@
                                 <div class="fields-item">
                                     <label for="#phone">Телефон</label>
                                     <input type="tel" name="phone" id="phone">
-                                </div>
-                                <div class="fields-item">
-                                    <label for="#rs">Р/С</label>
-                                    <input type="text" name="rs" id="rs">
                                 </div>
                             </div>
                         </div>
@@ -93,15 +85,6 @@
                                     <label for="#email">Email</label>
                                     <input type="email" name="email" id="email">
                                 </div>
-                                <div class="fields-item optional">
-                                    <label for="#email">Файл</label>
-                                    <input type="file" name="files" id="files">
-                                </div>
-                            </div>
-                            <div class="add-option">
-                                <span class="ic add-option"></span>
-                                <p class="add-text">Прикрепить файл</p>
-                                <p class="hidden-text">Скрыть</p>
                             </div>
                         </div>
                         <div class="column">
