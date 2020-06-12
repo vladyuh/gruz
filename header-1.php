@@ -140,75 +140,81 @@
                     <div class="header-services__list">
                         <div class="wrapper">
                             <div class="content">
-                                <div class="column">
-                                    <div class="column-title">Аренда авто</div>
-                                    <ul>
-                                        <li><a href='#'>Грузовое такси</a></li>
-                                        <li><a href='#'>Аренда авто с грузчиками</a></li>
-                                        <li><a href='#'>Аренда газели</a></li>
-                                        <li><a href='#'>Аренда грузовиков</a></li>
-                                        <li><a href='#'>Аренда шаланды</a></li>
-                                        <li><a href='#'>Аренда спецтехники</a></li>
-                                        <li><a href='#'>Фургон в аренд</a></li>
-                                        <li><a href='#'>Ваш личный водитель</a></li>
-                                        <li><a href='#'>Грузоперевозки 5 тонн</a></li>
-                                        <li><a href='#'>Грузоперевозки 10 тонн</a></li>
-                                        <li><a href='#'>Грузоперевозки 3 тонны</a></li>
-                                        <li><a href='#'>Грузоперевозки 20 тонн</a></li>
-                                    </ul>
-                                </div>
-                                <div class="column">
-                                    <div class="column-title">ПЕРЕВОЗКА</div>
-                                    <ul>
-                                        <li><a href='#'>Междугародние перевозки</a></li>
-                                        <li><a href='#'>Крупнотоннажные перевозки</a></li>
-                                        <li><a href='#'>Сборные грузы</a></li>
-                                        <li><a href='#'>Температурные перевозки</a></li>
-                                        <li><a href='#'>Перевозка стройматериалов</a></li>
-                                        <li><a href='#'>Грузовые перевозки</a></li>
-                                        <li><a href='#'>Перевозка ресторанов и кафе</a></li>
-                                        <li><a href='#'>Перевозка оборудования</a></li>
-                                        <li><a href='#'>Перевозка сейфов</a></li>
-                                        <li><a href='#'>Пассажирские перевозки</a></li>
-                                        <li><a href='#'>Мобильная доставка грузов</a></li>
-                                        <li><a href='#'>Перевозка мебели с грузчиками</a></li>
-                                        <li><a href='#'>Перевозка техники</a></li>
-                                        <li><a href='#'>Автоперевозки</a></li>
-                                        <li><a href='#'>Перевозка окон</a></li>
-                                    </ul>
-                                </div>
-                                <div class="column">
-                                    <div class="column-title">ПЕРЕЕЗДЫ</div>
-                                    <ul>
-                                        <li><a href='#'>Офисный переезд</a></li>
-                                        <li><a href='#'>Переезд предприятия</a></li>
-                                        <li><a href='#'>Офисный переезд с грузчиками</a></li>
-                                    </ul>
-                                    <div class="column-title">Услуги</div>
-                                    <ul>
-                                        <li><a href='#'>Экспедирование грузов</a></li>
-                                        <li><a href='#'>Организация отдела доставки</a></li>
-                                        <li><a href='#'>Вывоз мусора</a></li>
-                                        <li><a href='#'>Услуги эвакуации</a></li>
-                                        <li><a href='#'>Логистические услуги</a></li>
-                                        <li><a href='#'>Такси</a></li>
-                                        <li><a href='#'>Аутсорсинг транспортных услуг</a></li>
-                                    </ul>
-                                </div>
-                                <div class="column">
-                                    <div class="column-title">Грузчики</div>
-                                    <ul>
-                                        <li><a href='#'>Услуги грузчиков</a></li>
-                                        <li><a href='#'>Грузчик на час</a></li>
-                                        <li><a href='#'>Грузчики на склад</a></li>
-                                        <li><a href='#'>Перевозка техники с грузчиками</a></li>
-                                    </ul>
-                                    <div class="column-title">Упаковка</div>
-                                    <ul>
-                                        <li><a href='#'>Упаковка вещей</a></li>
-                                        <li><a href='#'>Упаковка</a></li>
-                                    </ul>
-                                </div>
+                                        <ul class="categories">
+                                            <li>
+                                                <a href="services.php">Аренда авто</a>
+                                                <ul class="subcategories">
+                                                    <li><a href='#'>Грузовое такси</a></li>
+                                                    <li><a href='#'>Аренда авто с грузчиками</a></li>
+                                                    <li><a href='#'>Аренда газели</a></li>
+                                                    <li><a href='#'>Аренда грузовиков</a></li>
+                                                    <li><a href='#'>Аренда шаланды</a></li>
+                                                    <li><a href='#'>Аренда спецтехники</a></li>
+                                                    <li><a href='#'>Фургон в аренд</a></li>
+                                                    <li><a href='#'>Ваш личный водитель</a></li>
+                                                    <li><a href='#'>Грузоперевозки 5 тонн</a></li>
+                                                    <li><a href='#'>Грузоперевозки 10 тонн</a></li>
+                                                    <li><a href='#'>Грузоперевозки 3 тонны</a></li>
+                                                    <li><a href='#'>Грузоперевозки 20 тонн</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="services.php">Перевозка</a>
+                                                <ul class="subcategories">
+                                                    <li><a href='#'>Междугародние перевозки</a></li>
+                                                    <li><a href='#'>Крупнотоннажные перевозки</a></li>
+                                                    <li><a href='#'>Сборные грузы</a></li>
+                                                    <li><a href='#'>Температурные перевозки</a></li>
+                                                    <li><a href='#'>Перевозка стройматериалов</a></li>
+                                                    <li><a href='#'>Грузовые перевозки</a></li>
+                                                    <li><a href='#'>Перевозка ресторанов и кафе</a></li>
+                                                    <li><a href='#'>Перевозка оборудования</a></li>
+                                                    <li><a href='#'>Перевозка сейфов</a></li>
+                                                    <li><a href='#'>Пассажирские перевозки</a></li>
+                                                    <li><a href='#'>Мобильная доставка грузов</a></li>
+                                                    <li><a href='#'>Перевозка мебели с грузчиками</a></li>
+                                                    <li><a href='#'>Перевозка техники</a></li>
+                                                    <li><a href='#'>Автоперевозки</a></li>
+                                                    <li><a href='#'>Перевозка окон</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="services.php">Переезды</a>
+                                                <ul class="subcategories">
+                                                    <li><a href='#'>Офисный переезд</a></li>
+                                                    <li><a href='#'>Переезд предприятия</a></li>
+                                                    <li><a href='#'>Офисный переезд с грузчиками</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="services.php">Услуги</a>
+                                                <ul class="subcategories">
+                                                    <li><a href='#'>Экспедирование грузов</a></li>
+                                                    <li><a href='#'>Организация отдела доставки</a></li>
+                                                    <li><a href='#'>Вывоз мусора</a></li>
+                                                    <li><a href='#'>Услуги эвакуации</a></li>
+                                                    <li><a href='#'>Логистические услуги</a></li>
+                                                    <li><a href='#'>Такси</a></li>
+                                                    <li><a href='#'>Аутсорсинг транспортных услуг</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="services.php">Грузчики</a>
+                                                <ul class="subcategories">
+                                                    <li><a href='#'>Услуги грузчиков</a></li>
+                                                    <li><a href='#'>Грузчик на час</a></li>
+                                                    <li><a href='#'>Грузчики на склад</a></li>
+                                                    <li><a href='#'>Перевозка техники с грузчиками</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="services.php">Упаковка</a>
+                                                <ul class="subcategories">
+                                                    <li><a href='#'>Упаковка вещей</a></li>
+                                                    <li><a href='#'>Упаковка</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                             </div>
                         </div>
                     </div>
