@@ -312,6 +312,54 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="tab">
+                                    <div class="services-items">
+                                       
+                                        <div class="item">
+                                            <div class="item-name">Дачный переезд</div>
+                                            <div class="item-price">за 2 040 руб.</div>
+                                            <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                            <div class="item-text"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab">
+                                    <div class="services-items">
+                                        <div class="item">
+                                            <div class="item-name">Квартирный переезд</div>
+                                            <div class="item-price">за 2 040 руб.</div>
+                                            <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                            <div class="item-text">
+                                                Подадим газель с грузчиками и без. Бесплатно спустим и поднимем на этаж.
+                                                Надежно упакуем вашу мебель и ваши вещи.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab">
+                                    <div class="services-items">
+                                       
+                                        <div class="item">
+                                            <div class="item-name">Дачный переезд</div>
+                                            <div class="item-price">за 2 040 руб.</div>
+                                            <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                            <div class="item-text"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab">
+                                    <div class="services-items">
+                                        <div class="item">
+                                            <div class="item-name">Квартирный переезд</div>
+                                            <div class="item-price">за 2 040 руб.</div>
+                                            <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                            <div class="item-text">
+                                                Подадим газель с грузчиками и без. Бесплатно спустим и поднимем на этаж.
+                                                Надежно упакуем вашу мебель и ваши вещи.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
