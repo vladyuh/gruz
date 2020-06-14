@@ -339,6 +339,496 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="tab">
+                                <div class="rent-items">
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="/img/rent/car1.png" alt="">
+                                        </div>
+                                        <div class="item-name">MAN</div>
+                                        <div class="item-volume">7 м<sup>3</sup></div>
+                                        <div class="item-dimensions">
+                                            <div class="item-dimensions-l">
+                                                <span class="name">Длина</span>
+                                                <span class="value">2,4</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-w">
+                                                <span class="name">Ширина</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-h">
+                                                <span class="name">Высота</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                        </div>
+                                        <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                        <div class="item-more">
+                                            <span class="ic info-g"></span>
+                                            Доп. информация
+                                        </div>
+                                        <div class="item-more--content">
+                                            <div class="title">
+                                                <span class="ic pallets"></span>
+                                                Количество паллет: 4
+                                            </div>
+                                            <div class="desc">
+                                                Просто незаменим при Крайне удобное решение для деловых грузоперевозок в
+                                                черте
+                                                города: машина небольшая, но очень грузоподъёмная, что позволяет
+                                                сэкономить
+                                                на
+                                                количестве рейсов и не переживать о том, что автомобиль не сможет
+                                                развернуться в
+                                                небольшом дворе.
+                                            </div>
+                                            <span class="ic arrow-down"></span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="/img/rent/car2.png" alt="">
+                                        </div>
+                                        <div class="item-name">Mercedes</div>
+                                        <div class="item-volume">5 м<sup>3</sup></div>
+                                        <div class="item-dimensions">
+                                            <div class="item-dimensions-l">
+                                                <span class="name">Длина</span>
+                                                <span class="value">3</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-w">
+                                                <span class="name">Ширина</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-h">
+                                                <span class="name">Высота</span>
+                                                <span class="value">1</span>
+                                            </div>
+                                        </div>
+                                        <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                        <div class="item-more">
+                                            <span class="ic info-g"></span>
+                                            Доп. информация
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="/img/rent/car3.png" alt="">
+                                        </div>
+                                        <div class="item-name">КамАЗ</div>
+                                        <div class="item-volume">17 м<sup>3</sup></div>
+                                        <div class="item-dimensions">
+                                            <div class="item-dimensions-l">
+                                                <span class="name">Длина</span>
+                                                <span class="value">3</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-w">
+                                                <span class="name">Ширина</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-h">
+                                                <span class="name">Высота</span>
+                                                <span class="value">1</span>
+                                            </div>
+                                        </div>
+                                        <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                        <div class="item-more">
+                                            <span class="ic info-g"></span>
+                                            Доп. информация
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="/img/rent/car4.png" alt="">
+                                        </div>
+                                        <div class="item-name">MAN</div>
+                                        <div class="item-volume">7 м<sup>3</sup></div>
+                                        <div class="item-dimensions">
+                                            <div class="item-dimensions-l">
+                                                <span class="name">Длина</span>
+                                                <span class="value">3</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-w">
+                                                <span class="name">Ширина</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-h">
+                                                <span class="name">Высота</span>
+                                                <span class="value">1</span>
+                                            </div>
+                                        </div>
+                                        <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                        <div class="item-more">
+                                            <span class="ic info-g"></span>
+                                            Доп. информация
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="/img/rent/car1.png" alt="">
+                                        </div>
+                                        <div class="item-name">MAN</div>
+                                        <div class="item-volume">7 м<sup>3</sup></div>
+                                        <div class="item-dimensions">
+                                            <div class="item-dimensions-l">
+                                                <span class="name">Длина</span>
+                                                <span class="value">2,4</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-w">
+                                                <span class="name">Ширина</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-h">
+                                                <span class="name">Высота</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                        </div>
+                                        <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                        <div class="item-more">
+                                            <span class="ic info-g"></span>
+                                            Доп. информация
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="/img/rent/car2.png" alt="">
+                                        </div>
+                                        <div class="item-name">Mercedes</div>
+                                        <div class="item-volume">5 м<sup>3</sup></div>
+                                        <div class="item-dimensions">
+                                            <div class="item-dimensions-l">
+                                                <span class="name">Длина</span>
+                                                <span class="value">3</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-w">
+                                                <span class="name">Ширина</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-h">
+                                                <span class="name">Высота</span>
+                                                <span class="value">1</span>
+                                            </div>
+                                        </div>
+                                        <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                        <div class="item-more">
+                                            <span class="ic info-g"></span>
+                                            Доп. информация
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="/img/rent/car3.png" alt="">
+                                        </div>
+                                        <div class="item-name">КамАЗ</div>
+                                        <div class="item-volume">17 м<sup>3</sup></div>
+                                        <div class="item-dimensions">
+                                            <div class="item-dimensions-l">
+                                                <span class="name">Длина</span>
+                                                <span class="value">3</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-w">
+                                                <span class="name">Ширина</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-h">
+                                                <span class="name">Высота</span>
+                                                <span class="value">1</span>
+                                            </div>
+                                        </div>
+                                        <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                        <div class="item-more">
+                                            <span class="ic info-g"></span>
+                                            Доп. информация
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="/img/rent/car4.png" alt="">
+                                        </div>
+                                        <div class="item-name">MAN</div>
+                                        <div class="item-volume">7 м<sup>3</sup></div>
+                                        <div class="item-dimensions">
+                                            <div class="item-dimensions-l">
+                                                <span class="name">Длина</span>
+                                                <span class="value">3</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-w">
+                                                <span class="name">Ширина</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-h">
+                                                <span class="name">Высота</span>
+                                                <span class="value">1</span>
+                                            </div>
+                                        </div>
+                                        <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                        <div class="item-more">
+                                            <span class="ic info-g"></span>
+                                            Доп. информация
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <div class="rent-items">
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="/img/rent/car1.png" alt="">
+                                        </div>
+                                        <div class="item-name">MAN</div>
+                                        <div class="item-volume">7 м<sup>3</sup></div>
+                                        <div class="item-dimensions">
+                                            <div class="item-dimensions-l">
+                                                <span class="name">Длина</span>
+                                                <span class="value">2,4</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-w">
+                                                <span class="name">Ширина</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-h">
+                                                <span class="name">Высота</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                        </div>
+                                        <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                        <div class="item-more">
+                                            <span class="ic info-g"></span>
+                                            Доп. информация
+                                        </div>
+                                        <div class="item-more--content">
+                                            <div class="title">
+                                                <span class="ic pallets"></span>
+                                                Количество паллет: 4
+                                            </div>
+                                            <div class="desc">
+                                                Просто незаменим при Крайне удобное решение для деловых грузоперевозок в
+                                                черте
+                                                города: машина небольшая, но очень грузоподъёмная, что позволяет
+                                                сэкономить
+                                                на
+                                                количестве рейсов и не переживать о том, что автомобиль не сможет
+                                                развернуться в
+                                                небольшом дворе.
+                                            </div>
+                                            <span class="ic arrow-down"></span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="/img/rent/car2.png" alt="">
+                                        </div>
+                                        <div class="item-name">Mercedes</div>
+                                        <div class="item-volume">5 м<sup>3</sup></div>
+                                        <div class="item-dimensions">
+                                            <div class="item-dimensions-l">
+                                                <span class="name">Длина</span>
+                                                <span class="value">3</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-w">
+                                                <span class="name">Ширина</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-h">
+                                                <span class="name">Высота</span>
+                                                <span class="value">1</span>
+                                            </div>
+                                        </div>
+                                        <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                        <div class="item-more">
+                                            <span class="ic info-g"></span>
+                                            Доп. информация
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="/img/rent/car3.png" alt="">
+                                        </div>
+                                        <div class="item-name">КамАЗ</div>
+                                        <div class="item-volume">17 м<sup>3</sup></div>
+                                        <div class="item-dimensions">
+                                            <div class="item-dimensions-l">
+                                                <span class="name">Длина</span>
+                                                <span class="value">3</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-w">
+                                                <span class="name">Ширина</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-h">
+                                                <span class="name">Высота</span>
+                                                <span class="value">1</span>
+                                            </div>
+                                        </div>
+                                        <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                        <div class="item-more">
+                                            <span class="ic info-g"></span>
+                                            Доп. информация
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="/img/rent/car4.png" alt="">
+                                        </div>
+                                        <div class="item-name">MAN</div>
+                                        <div class="item-volume">7 м<sup>3</sup></div>
+                                        <div class="item-dimensions">
+                                            <div class="item-dimensions-l">
+                                                <span class="name">Длина</span>
+                                                <span class="value">3</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-w">
+                                                <span class="name">Ширина</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-h">
+                                                <span class="name">Высота</span>
+                                                <span class="value">1</span>
+                                            </div>
+                                        </div>
+                                        <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                        <div class="item-more">
+                                            <span class="ic info-g"></span>
+                                            Доп. информация
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="/img/rent/car1.png" alt="">
+                                        </div>
+                                        <div class="item-name">MAN</div>
+                                        <div class="item-volume">7 м<sup>3</sup></div>
+                                        <div class="item-dimensions">
+                                            <div class="item-dimensions-l">
+                                                <span class="name">Длина</span>
+                                                <span class="value">2,4</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-w">
+                                                <span class="name">Ширина</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-h">
+                                                <span class="name">Высота</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                        </div>
+                                        <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                        <div class="item-more">
+                                            <span class="ic info-g"></span>
+                                            Доп. информация
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="/img/rent/car2.png" alt="">
+                                        </div>
+                                        <div class="item-name">Mercedes</div>
+                                        <div class="item-volume">5 м<sup>3</sup></div>
+                                        <div class="item-dimensions">
+                                            <div class="item-dimensions-l">
+                                                <span class="name">Длина</span>
+                                                <span class="value">3</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-w">
+                                                <span class="name">Ширина</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-h">
+                                                <span class="name">Высота</span>
+                                                <span class="value">1</span>
+                                            </div>
+                                        </div>
+                                        <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                        <div class="item-more">
+                                            <span class="ic info-g"></span>
+                                            Доп. информация
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="/img/rent/car3.png" alt="">
+                                        </div>
+                                        <div class="item-name">КамАЗ</div>
+                                        <div class="item-volume">17 м<sup>3</sup></div>
+                                        <div class="item-dimensions">
+                                            <div class="item-dimensions-l">
+                                                <span class="name">Длина</span>
+                                                <span class="value">3</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-w">
+                                                <span class="name">Ширина</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-h">
+                                                <span class="name">Высота</span>
+                                                <span class="value">1</span>
+                                            </div>
+                                        </div>
+                                        <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                        <div class="item-more">
+                                            <span class="ic info-g"></span>
+                                            Доп. информация
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-image">
+                                            <img src="/img/rent/car4.png" alt="">
+                                        </div>
+                                        <div class="item-name">MAN</div>
+                                        <div class="item-volume">7 м<sup>3</sup></div>
+                                        <div class="item-dimensions">
+                                            <div class="item-dimensions-l">
+                                                <span class="name">Длина</span>
+                                                <span class="value">3</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-w">
+                                                <span class="name">Ширина</span>
+                                                <span class="value">1,7</span>
+                                            </div>
+                                            <span>x</span>
+                                            <div class="item-dimensions-h">
+                                                <span class="name">Высота</span>
+                                                <span class="value">1</span>
+                                            </div>
+                                        </div>
+                                        <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
+                                        <div class="item-more">
+                                            <span class="ic info-g"></span>
+                                            Доп. информация
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
