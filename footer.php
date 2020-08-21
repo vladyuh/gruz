@@ -420,39 +420,6 @@
     </form>
 </div>
 
-<div id="edit-driver1" class="popup wide popup-edit" style="display:none">
-    <div class="popup-title">Редактирование данных</div>
-    <form action="">
-        <div class="fields">
-            <div class="fields-item">
-                <label for="">ФИО</label>
-                <input type="text" name="" id="" value="Иванов Семен">
-            </div>
-            <div class="fields-item">
-                <label for="">телефон</label>
-                <input type="tel" name="" id="" value="+375 (29) 495-34-34">
-            </div>
-            <div class="fields-item fullwidth">
-                <label for="">Паспорт (Серия номер, кем и дата выдачи)</label>
-                <input type="text" name="" id="" value="КВ 3581437 Октябрьским РОВД 03.08.2014">
-            </div>
-        </div>
-        <div class="attached-files photos">
-            <div class="attached-files__block image">
-                <img src="/img/car-image-1.png" alt="">
-                <a href="#"><span class="ic basket"></span></a>
-            </div>
-            <div class="attached-files__block image">
-                <img src="/img/car-image-2.png" alt="">
-                <a href="#"><span class="ic basket"></span></a>
-            </div>
-        </div>
-        <div class="submit">
-            <button class="flat-btn yellow">Сохранить</button>
-        </div>
-    </form>
-</div>
-
 <div id="edit-mover" class="popup wide popup-edit" style="display:none">
     <div class="popup-title">Редактирование данных</div>
     <form action="">
@@ -497,11 +464,11 @@
                 <label for="">год выпуска</label>
                 <input type="text" name="" id="" value="2010">
             </div>
-            <div class="fields-item">
+            <div class="fields-item pallets">
                 <label for="">паллеты</label>
                 <input type="text" value="2">
             </div>
-            <div class="fields-item">
+            <div class="fields-item dimensions">
                 <label for="">габариты основного отсека (м)</label>
                 <div class="fields-item__box">
                     <input type="text" placeholder="Д" value="6">
@@ -510,13 +477,17 @@
                     <span>x</span>
                     <input type="text" placeholder="В" value="2.5">
                 </div>
+                <div class="tooltip">
+                    <span class="ic info"></span>
+                    <p>Ширину и высоту необходимо указывать по проему грузового отсека</p>
+                </div>
             </div>
             <div class="fields-item">
                 <label for="">грузоподъемность (т)</label>
                 <input type="text" name="" id="" value="3">
             </div>
         </div>
-        <div class="add-option">
+        <div class="add-option add-trailer">
             <span class="ic add-option"></span>
             <p class="add-text">Добавить прицеп</p>
             <p class="hidden-text">Удалить прицеп</p>
@@ -524,25 +495,25 @@
         <div class="fields trailer">
             <div class="fields-item">
                 <label class="grey">Номер прицепа</label>
-                <input type="text" value="4658 AX-3">
+                <input type="text" value="">
             </div>
             <div class="fields-item">
                 <label class="grey">Паллеты</label>
-                <input type="number" value="2">
+                <input type="number" value="">
             </div>
             <div class="fields-item">
                 <label class="grey">Габариты(М)</label>
                 <div class="fields-item__box">
-                    <input type="text" placeholder="Д" value="3">
+                    <input type="text" placeholder="Д" value="">
                     <span>x</span>
-                    <input type="text" placeholder="Ш" value="2">
+                    <input type="text" placeholder="Ш" value="">
                     <span>x</span>
-                    <input type="text" placeholder="В" value="2">
+                    <input type="text" placeholder="В" value="">
                 </div>
             </div>
             <div class="fields-item">
                 <label class="grey">грузоподъемность (т)</label>
-                <input type="text" value="1.5">
+                <input type="text" value="">
             </div>
 
         </div>
@@ -556,119 +527,6 @@
                 <input type="file" name="files" multiple="">
                 <span class="ic files"></span>
                 <label for="files">Загрузить документ</label>
-            </div>
-        </div>
-        <div class="submit">
-            <button class="flat-btn yellow">Сохранить</button>
-        </div>
-    </form>
-</div>
-
-<div id="edit-car1" class="popup wide popup-addautos" style="display:none">
-    <div class="popup-title">Редактирование данных</div>
-    <form action="">
-        <div class="fields car">
-            <div class="fields-item">
-                <label for="">номер машины</label>
-                <input type="text" name="" id="" value="4658 AX-3">
-            </div>
-            <div class="fields-item">
-                <label for="">марка</label>
-                <input type="text" name="" id="" value="Mercedes">
-            </div>
-            <div class="fields-item">
-                <label for="">Модель</label>
-                <input type="text" name="" id="" value="Benz">
-            </div>
-            <div class="fields-item">
-                <label for="">год выпуска</label>
-                <input type="text" name="" id="" value="2010">
-            </div>
-            <div class="fields-item">
-                <label for="">паллеты</label>
-                <input type="text" value="2">
-            </div>
-            <div class="fields-item">
-                <label for="">габариты основного отсека (м)</label>
-                <div class="fields-item__box">
-                    <input type="text" placeholder="Д" value="6">
-                    <span>x</span>
-                    <input type="text" placeholder="Ш" value="2">
-                    <span>x</span>
-                    <input type="text" placeholder="В" value="2.5">
-                </div>
-            </div>
-            <div class="fields-item">
-                <label for="">грузоподъемность (т)</label>
-                <input type="text" name="" id="" value="3">
-            </div>
-        </div>
-        <div class="add-option">
-            <span class="ic add-option"></span>
-            <p class="add-text">Добавить прицеп</p>
-            <p class="hidden-text">Удалить прицеп</p>
-        </div>
-        <div class="fields trailer">
-            <div class="fields-item">
-                <label class="grey">Номер прицепа</label>
-                <input type="text" value="4658 AX-3">
-            </div>
-            <div class="fields-item">
-                <label class="grey">Паллеты</label>
-                <input type="number" value="2">
-            </div>
-            <div class="fields-item">
-                <label class="grey">Габариты(М)</label>
-                <div class="fields-item__box">
-                    <input type="text" placeholder="Д" value="3">
-                    <span>x</span>
-                    <input type="text" placeholder="Ш" value="2">
-                    <span>x</span>
-                    <input type="text" placeholder="В" value="2">
-                </div>
-            </div>
-            <div class="fields-item">
-                <label class="grey">грузоподъемность (т)</label>
-                <input type="text" value="1.5">
-            </div>
-
-        </div>
-        <div class="fields files">
-            <div class="attach-images drop-area">
-                <input type="file" name="images" multiple="" accept="image/png, image/jpeg">
-                <span class="ic images"></span>
-                <label for="files">Загрузить фото авто</label>
-            </div>
-            <div class="attach-files drop-area">
-                <input type="file" name="files" multiple="">
-                <span class="ic files"></span>
-                <label for="files">Загрузить документ</label>
-            </div>
-        </div>
-        <div class="attached-files photos">
-            <div class="attached-files__block image">
-                <img src="/img/car-image-1.png" alt="">
-            </div>
-            <div class="attached-files__block image">
-                <img src="/img/car-image-2.png" alt="">
-            </div>
-            <div class="attached-files__block image">
-                <img src="/img/car-image-3.png" alt="">
-            </div>
-            <div class="attached-files__block image">
-                <img src="/img/car-image-2.png" alt="">
-            </div>
-            <div class="attached-files__block image">
-                <img src="/img/car-image-3.png" alt="">
-            </div>
-        </div>
-        <div class="attached-files docs">
-            <a href="" download class="attached-files__block doc">
-                <div class="ext">PDF</div>
-                <div class="name">Договор автомобильной перевозки груза.pdf <span>(236 Кб)</span></div>
-            </a>
-            <div class="attached-files__block doc">
-
             </div>
         </div>
         <div class="submit">

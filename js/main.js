@@ -45,8 +45,7 @@ $(document).ready(function () {
     arrows: false,
     dots: true,
     appendDots: $(".autopark .slider-nav .dots"),
-    responsive: [
-      {
+    responsive: [{
         breakpoint: 1111,
         settings: {
           slidesToShow: 3,
@@ -98,8 +97,7 @@ $(document).ready(function () {
 
   $(".ic.minus").on("click", function () {
     var old = $(this).parents(".input-box").find('input[type="number"]').val();
-    if (old == 0) {
-    } else {
+    if (old == 0) {} else {
       $(this)
         .parents(".input-box")
         .find('input[type="number"]')
@@ -297,8 +295,7 @@ $(document).ready(function () {
 
       if (Math.abs(lastScrollTop - st) <= delta) return;
 
-      if ($(".header-content__m--menu").hasClass("open")) {
-      } else {
+      if ($(".header-content__m--menu").hasClass("open")) {} else {
         if (st > lastScrollTop && st > navbarHeight) {
           $("header").removeClass("nav-down").addClass("nav-up");
         } else {
@@ -497,8 +494,7 @@ $(document).ready(function () {
       });
 
       // Создание экземпляра маршрута.
-      multiRoute = new ymaps.multiRouter.MultiRoute(
-        {
+      multiRoute = new ymaps.multiRouter.MultiRoute({
           // Точки маршрута.
           // Обязательное поле.
           referencePoints: referencePoints,
@@ -607,7 +603,7 @@ $(document).ready(function () {
 
   //добавление прицепа
 
-  $("#add-car").on("click", ".add-trailer span.ic.add-option", function () {
+  $(".popup-addautos").on("click", ".add-trailer span.ic.add-option", function () {
     $(this).toggleClass("active remove-option");
     $(this).parents("form").find(".fields.trailer").toggleClass("active");
     var inputs = $(this)

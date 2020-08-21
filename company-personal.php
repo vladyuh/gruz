@@ -246,7 +246,7 @@
                                             <span class="ic phone"></span>
                                             <p>+375 (29) 495-34-34</p>
                                         </a>
-                                        <a href="#edit-driver1" data-fancybox class="item-edit"><span class="ic edit"></span></a>
+                                        <a href="#edit-driver" data-fancybox class="item-edit"><span class="ic edit"></span></a>
                                         <a href="#" class="item-remove"><span class="ic delete"></span></a>
                                     </div>
                                     <div class="item">
@@ -295,7 +295,7 @@
                                         <div class="item-name">Mercedes-Benz</div>
                                         <div class="item-number">4658 АХ-3</div>
                                         <a href="#add-documents" data-fancybox class="item-docs"><span class="ic document"></a>
-                                        <a href="#edit-car1" data-fancybox class="item-edit"><span class="ic edit"></span></a>
+                                        <a href="#edit-car" data-fancybox class="item-edit"><span class="ic edit"></span></a>
                                         <a href="#" class="item-remove"><span class="ic delete"></span></a>
                                     </div>
                                     <div class="item">
