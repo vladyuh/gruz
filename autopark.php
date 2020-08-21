@@ -60,15 +60,15 @@
                             </div>
                             <form action="" class="filter">
                                 <label class="custom-checkbox">5т
-                                    <input type="checkbox"  value="tonnage5">
+                                    <input type="checkbox" checked="checked">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="custom-checkbox">10т
-                                    <input type="checkbox" value="tonnage10">
+                                    <input type="checkbox">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="custom-checkbox">Более 10т
-                                    <input type="checkbox"  value="tonnage11">
+                                    <input type="checkbox">
                                     <span class="checkmark"></span>
                                 </label>
                             </form>
@@ -76,7 +76,7 @@
                         <div class="section-tabs__content">
                             <div class="tab">
                                 <div class="autopark-detail--items">
-                                    <div class="item tonnage5">
+                                    <div class="item">
                                         <div class="item-image">
                                             <img src="/img/truck1.png" alt="">
                                         </div>
@@ -121,7 +121,7 @@
                                             <span class="ic arrow-down"></span>
                                         </div>
                                     </div>
-                                    <div class="item tonnage5">
+                                    <div class="item">
                                         <div class="item-image">
                                             <img src="/img/truck2.png" alt="">
                                         </div>
@@ -149,7 +149,7 @@
                                             Доп. информация
                                         </div>
                                     </div>
-                                    <div class="item tonnage10">
+                                    <div class="item">
                                         <div class="item-image">
                                             <img src="/img/truck3.png" alt="">
                                         </div>
@@ -177,7 +177,7 @@
                                             Доп. информация
                                         </div>
                                     </div>
-                                    <div class="item tonnage10">
+                                    <div class="item">
                                         <div class="item-image">
                                             <img src="/img/truck4.png" alt="">
                                         </div>
@@ -205,7 +205,7 @@
                                             Доп. информация
                                         </div>
                                     </div>
-                                    <div class="item tonnage11">
+                                    <div class="item">
                                         <div class="item-image">
                                             <img src="/img/truck1.png" alt="">
                                         </div>
@@ -233,7 +233,7 @@
                                             Доп. информация
                                         </div>
                                     </div>
-                                    <div class="item tonnage11">
+                                    <div class="item">
                                         <div class="item-image">
                                             <img src="/img/truck2.png" alt="">
                                         </div>
@@ -265,7 +265,7 @@
                             </div>
                             <div class="tab">
                                 <div class="autopark-detail--items">
-                                    <div class="item tonnage5">
+                                    <div class="item">
                                         <div class="item-image">
                                             <img src="/img/truck1.png" alt="">
                                         </div>
@@ -310,7 +310,7 @@
                                             <span class="ic arrow-down"></span>
                                         </div>
                                     </div>
-                                    <div class="item tonnage10">
+                                    <div class="item">
                                         <div class="item-image">
                                             <img src="/img/truck2.png" alt="">
                                         </div>

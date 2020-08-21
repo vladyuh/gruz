@@ -28,8 +28,19 @@
     <div class="popup-title">Авторизация</div>
     <form action="">
         <div class="fields">
-            <div class="fields-item green">
-                <label for="">Email (Логин)</label>
+            <div class="fields-item select green">
+                <span class="ic person-green"></span>
+                <select>
+                    <option value="entity">Юридическое лицо</option>
+                    <option value="individ">Физическое лицо</option>
+                </select>
+            </div>
+            <div class="fields-item canHide individ green">
+                <label for="">телефон</label>
+                <input type="tel">
+            </div>
+            <div class="fields-item canHide entity green">
+                <label for="">email</label>
                 <input type="email">
             </div>
             <div class="fields-item green">
@@ -61,7 +72,7 @@
             </div>
         </div>
         <div class="submit">
-            <button class="flat-btn yellow">Войти</button>
+            <button class="flat-btn yellow">Отправить</button>
         </div>
         <div class="agreement">
             Нажимая на кнопку, я принимаю соглашение на <strong>обработку персональных данных</strong>
@@ -136,6 +147,569 @@
 
 </div>
 
+<div id="send-contract" class="popup" style="display:none">
+    <div class="popup-title">Отправить договор</div>
+    <form action="">
+        <div class="fields">
+            <div class="attach-files drop-area">
+                <input type="file" name="contract" id="contract" multiple="">
+                <span class="ic files"></span>
+                <label for="files">Загрузить документ</label>
+            </div>
+        </div>
+        <div class="submit">
+            <button class="flat-btn yellow">Отправить</button>
+        </div>
+    </form>
+
+</div>
+
+<div id="add-driver" class="popup popup-adddriver" style="display:none">
+    <div class="popup-title">Добавить водителя</div>
+    <form action="">
+        <div class="fields">
+            <div class="fields-item">
+                <label for="">ФИО</label>
+                <input type="text" name="" id="">
+            </div>
+            <div class="fields-item">
+                <label for="">телефон</label>
+                <input type="tel" name="" id="">
+            </div>
+            <div class="fields-item fullwidth">
+                <label for="">Паспорт (Серия номер, кем и дата выдачи)</label>
+                <input type="text" name="" id="">
+            </div>
+            <div class="attach-images drop-area">
+                <input type="file" name="images" multiple="" accept="image/png, image/jpeg">
+                <span class="ic images"></span>
+                <label for="files">Загрузить фото водительского удостоверения</label>
+            </div>
+        </div>
+        <div class="submit">
+            <button class="flat-btn yellow">Добавить</button>
+        </div>
+    </form>
+</div>
+
+<div id="add-mover" class="popup popup-adddriver" style="display:none">
+    <div class="popup-title">Добавить грузчика</div>
+    <form action="">
+        <div class="fields">
+            <div class="fields-item">
+                <label for="">ФИО</label>
+                <input type="text" name="" id="">
+            </div>
+            <div class="fields-item">
+                <label for="">телефон</label>
+                <input type="tel" name="" id="">
+            </div>
+            <div class="fields-item fullwidth">
+                <label for="">Паспорт (Серия номер, кем и дата выдачи)</label>
+                <input type="text" name="" id="">
+            </div>
+        </div>
+        <div class="submit">
+            <button class="flat-btn yellow">Добавить</button>
+        </div>
+    </form>
+
+</div>
+
+<div id="add-car" class="popup popup-addautos" style="display:none">
+    <div class="popup-title">Добавить автомобиль</div>
+    <form action="">
+        <div class="fields car">
+            <div class="fields-item">
+                <label for="">номер машины</label>
+                <input type="text" name="" id="">
+            </div>
+            <div class="fields-item">
+                <label for="">марка</label>
+                <input type="text" name="" id="">
+            </div>
+            <div class="fields-item">
+                <label for="">Модель</label>
+                <input type="text" name="" id="">
+            </div>
+            <div class="fields-item">
+                <label for="">год выпуска</label>
+                <input type="text" name="" id="">
+            </div>
+            <div class="fields-item pallets">
+                <label for="">паллеты</label>
+                <input type="text">
+            </div>
+            <div class="fields-item dimensions">
+                <label for="">габариты основного отсека (м)</label>
+                <div class="fields-item__box">
+                    <input type="text" placeholder="Д">
+                    <span>x</span>
+                    <input type="text" placeholder="Ш">
+                    <span>x</span>
+                    <input type="text" placeholder="В">
+                </div>
+                <div class="tooltip">
+                    <span class="ic info"></span>
+                    <p>Ширину и высоту необходимо указывать по проему грузового отсека</p>
+                </div>
+            </div>
+            <div class="fields-item">
+                <label for="">грузоподъемность (т)</label>
+                <input type="text" name="" id="">
+            </div>
+        </div>
+        <div class="add-option add-trailer">
+            <span class="ic add-option"></span>
+            <p class="add-text">Добавить прицеп</p>
+            <p class="hidden-text">Удалить прицеп</p>
+        </div>
+        <div class="fields trailer">
+            <div class="fields-item">
+                <label class="grey">Номер прицепа</label>
+                <input type="text">
+            </div>
+            <div class="fields-item">
+                <label class="grey">Паллеты</label>
+                <input type="number">
+            </div>
+            <div class="fields-item">
+                <label class="grey">Габариты(М)</label>
+                <div class="fields-item__box">
+                    <input type="text" placeholder="Д">
+                    <span>x</span>
+                    <input type="text" placeholder="Ш">
+                    <span>x</span>
+                    <input type="text" placeholder="В">
+                </div>
+            </div>
+            <div class="fields-item">
+                <label class="grey">грузоподъемность (т)</label>
+                <input type="text">
+            </div>
+
+        </div>
+        <div class="fields files">
+            <div class="attach-images drop-area">
+                <input type="file" name="images" multiple="" accept="image/png, image/jpeg">
+                <span class="ic images"></span>
+                <label for="files">Загрузить фото авто</label>
+            </div>
+            <div class="attach-files drop-area">
+                <input type="file" name="files" multiple="">
+                <span class="ic files"></span>
+                <label for="files">Загрузить документ</label>
+            </div>
+        </div>
+        <div class="submit">
+            <button class="flat-btn yellow">Добавить</button>
+        </div>
+    </form>
+
+</div>
+
+<div id="order-accept" class="popup popup-order" style="display:none">
+    <div class="popup-title">Заказ на перевозку успешно создан!</div>
+    <div class="popup-desc">
+        <p>За час до подачи автомобиля вам придет sms-сообщение с информацией о водителе.</p>
+    </div>
+    <form action="">
+        <div class="fields">
+            <div class="enterCode">
+                <span class="ic code"></span>
+                <div class="enterCode-input">
+                    <label for="">Введите смс код</label>
+                    <input type="text" name="СМС-код" value="320975">
+                </div>
+            </div>
+        </div>
+        <div class="submit">
+            <button type="submit" class="flat-btn yellow">Подтвердить</button>
+        </div>
+    </form>
+</div>
+
+<!-- <div id="order-accept-1" class="popup popup-order" style="display:none">
+    <div class="popup-title">Заказ на перевозку успешно создан!</div>
+    <div class="popup-desc">
+        <p>За час до подачи автомобиля вам придет sms-сообщение с информацией о водителе.</p>
+        <br>
+        <p>Для уточнения деталей можете обращаться по номеру телефона: <a href="">+ 375 29 000 00 00</a></p>
+    </div>
+    <form action="">
+        <div class="fields">
+            <div class="enterCode">
+                <span class="ic code"></span>
+                <div class="enterCode-input">
+                    <label for="">Введите смс код</label>
+                    <input type="text" name="СМС-код" value="320975">
+                </div>
+            </div>
+        </div>
+        <div class="register-checkbox">
+            <label class="switch">
+                <input type="checkbox" name="register" checked="checked" value="Зарегистрировать по номеру телефона">
+                <span class="slider round"></span>
+            </label>
+            <div class="text">Зарегистрировать в ЛК по номеру телефона для <br>отслеживания заказа</div>
+        </div>
+        <div class="submit">
+            <button type="submit" class="flat-btn yellow">Продолжить</button>
+        </div>
+    </form>
+</div> -->
+
+<div id="order-success" class="popup popup-order" style="display:none">
+    <div class="popup-title">Спасибо, ваш заказ успешно создан!</div>
+    <div class="popup-desc">
+        <p>За час до подачи автомобиля вам придет sms-сообщение с информацией об автомобиле и о водителе.</p>
+        <br>
+        <p>Для отслеживания статуса заказа вы можете авторизоваться в Личном кабинете по номеру телефона и коду из
+            sms-сообщения присланного ранее при подтверждении заказа или по почте для юридических лиц.</p>
+    </div>
+    <div class="submit">
+        <a href="javascript:$.fancybox.close();" class="flat-btn yellow">Закрыть</a>
+    </div>
+</div>
+
+<div id="order-success-1" class="popup popup-order" style="display:none">
+    <div class="popup-title">Спасибо, ваш заказ успешно создан!</div>
+    <div class="popup-desc">
+        <p>За час до подачи автомобиля вам придет sms-сообщение с информацией об автомобиле и о водителе.</p>
+        <br>
+        <p>Возможность отслеживания заказа доступна в Личном кабинете.</p>
+    </div>
+    <div class="submit">
+        <a href="javascript:$.fancybox.close();" class="flat-btn yellow">Закрыть</a>
+    </div>
+</div>
+
+<div id="reg-success" class="popup popup-register" style="display:none">
+    <div class="popup-title">Вы успешно зарегистрировались на сайте!</div>
+    <div class="popup-desc">Для входа в личный кабинет пройдите авторизацию</div>
+    <div class="submit">
+        <a href="#" class="flat-btn yellow">Авторизироваться</a>
+    </div>
+</div>
+
+<div id="edit-driver" class="popup wide popup-edit" style="display:none">
+    <div class="popup-title">Редактирование данных</div>
+    <form action="">
+        <div class="fields">
+            <div class="fields-item">
+                <label for="">ФИО</label>
+                <input type="text" name="" id="" value="Иванов Семен">
+            </div>
+            <div class="fields-item">
+                <label for="">телефон</label>
+                <input type="tel" name="" id="" value="+375 (29) 495-34-34">
+            </div>
+            <div class="fields-item fullwidth">
+                <label for="">Паспорт (Серия номер, кем и дата выдачи)</label>
+                <input type="text" name="" id="" value="КВ 3581437 Октябрьским РОВД 03.08.2014">
+            </div>
+            <div class="attach-images drop-area">
+                <input type="file" name="images" multiple="" accept="image/png, image/jpeg">
+                <span class="ic images"></span>
+                <label for="files">Загрузить фото водительского удостоверения</label>
+            </div>
+        </div>
+        <div class="submit">
+            <button class="flat-btn yellow">Сохранить</button>
+        </div>
+    </form>
+</div>
+
+<div id="edit-driver1" class="popup wide popup-edit" style="display:none">
+    <div class="popup-title">Редактирование данных</div>
+    <form action="">
+        <div class="fields">
+            <div class="fields-item">
+                <label for="">ФИО</label>
+                <input type="text" name="" id="" value="Иванов Семен">
+            </div>
+            <div class="fields-item">
+                <label for="">телефон</label>
+                <input type="tel" name="" id="" value="+375 (29) 495-34-34">
+            </div>
+            <div class="fields-item fullwidth">
+                <label for="">Паспорт (Серия номер, кем и дата выдачи)</label>
+                <input type="text" name="" id="" value="КВ 3581437 Октябрьским РОВД 03.08.2014">
+            </div>
+        </div>
+        <div class="attached-files photos">
+            <div class="attached-files__block image">
+                <img src="/img/car-image-1.png" alt="">
+                <a href="#"><span class="ic basket"></span></a>
+            </div>
+            <div class="attached-files__block image">
+                <img src="/img/car-image-2.png" alt="">
+                <a href="#"><span class="ic basket"></span></a>
+            </div>
+        </div>
+        <div class="submit">
+            <button class="flat-btn yellow">Сохранить</button>
+        </div>
+    </form>
+</div>
+
+<div id="edit-mover" class="popup wide popup-edit" style="display:none">
+    <div class="popup-title">Редактирование данных</div>
+    <form action="">
+        <div class="fields">
+            <div class="fields-item">
+                <label for="">ФИО</label>
+                <input type="text" name="" id="" value="Иванов Семен">
+            </div>
+            <div class="fields-item">
+                <label for="">телефон</label>
+                <input type="tel" name="" id="" value="+375 (29) 495-34-34">
+            </div>
+            <div class="fields-item fullwidth">
+                <label for="">Паспорт (Серия номер, кем и дата выдачи)</label>
+                <input type="text" name="" id="" value="КВ 3581437 Октябрьским РОВД 03.08.2014">
+            </div>
+        </div>
+        <div class="submit">
+            <button class="flat-btn yellow">Сохранить</button>
+        </div>
+    </form>
+
+</div>
+
+<div id="edit-car" class="popup wide popup-addautos" style="display:none">
+    <div class="popup-title">Редактирование данных</div>
+    <form action="">
+        <div class="fields car">
+            <div class="fields-item">
+                <label for="">номер машины</label>
+                <input type="text" name="" id="" value="4658 AX-3">
+            </div>
+            <div class="fields-item">
+                <label for="">марка</label>
+                <input type="text" name="" id="" value="Mercedes">
+            </div>
+            <div class="fields-item">
+                <label for="">Модель</label>
+                <input type="text" name="" id="" value="Benz">
+            </div>
+            <div class="fields-item">
+                <label for="">год выпуска</label>
+                <input type="text" name="" id="" value="2010">
+            </div>
+            <div class="fields-item">
+                <label for="">паллеты</label>
+                <input type="text" value="2">
+            </div>
+            <div class="fields-item">
+                <label for="">габариты основного отсека (м)</label>
+                <div class="fields-item__box">
+                    <input type="text" placeholder="Д" value="6">
+                    <span>x</span>
+                    <input type="text" placeholder="Ш" value="2">
+                    <span>x</span>
+                    <input type="text" placeholder="В" value="2.5">
+                </div>
+            </div>
+            <div class="fields-item">
+                <label for="">грузоподъемность (т)</label>
+                <input type="text" name="" id="" value="3">
+            </div>
+        </div>
+        <div class="add-option">
+            <span class="ic add-option"></span>
+            <p class="add-text">Добавить прицеп</p>
+            <p class="hidden-text">Удалить прицеп</p>
+        </div>
+        <div class="fields trailer">
+            <div class="fields-item">
+                <label class="grey">Номер прицепа</label>
+                <input type="text" value="4658 AX-3">
+            </div>
+            <div class="fields-item">
+                <label class="grey">Паллеты</label>
+                <input type="number" value="2">
+            </div>
+            <div class="fields-item">
+                <label class="grey">Габариты(М)</label>
+                <div class="fields-item__box">
+                    <input type="text" placeholder="Д" value="3">
+                    <span>x</span>
+                    <input type="text" placeholder="Ш" value="2">
+                    <span>x</span>
+                    <input type="text" placeholder="В" value="2">
+                </div>
+            </div>
+            <div class="fields-item">
+                <label class="grey">грузоподъемность (т)</label>
+                <input type="text" value="1.5">
+            </div>
+
+        </div>
+        <div class="fields files">
+            <div class="attach-images drop-area">
+                <input type="file" name="images" multiple="" accept="image/png, image/jpeg">
+                <span class="ic images"></span>
+                <label for="files">Загрузить фото авто</label>
+            </div>
+            <div class="attach-files drop-area">
+                <input type="file" name="files" multiple="">
+                <span class="ic files"></span>
+                <label for="files">Загрузить документ</label>
+            </div>
+        </div>
+        <div class="submit">
+            <button class="flat-btn yellow">Сохранить</button>
+        </div>
+    </form>
+</div>
+
+<div id="edit-car1" class="popup wide popup-addautos" style="display:none">
+    <div class="popup-title">Редактирование данных</div>
+    <form action="">
+        <div class="fields car">
+            <div class="fields-item">
+                <label for="">номер машины</label>
+                <input type="text" name="" id="" value="4658 AX-3">
+            </div>
+            <div class="fields-item">
+                <label for="">марка</label>
+                <input type="text" name="" id="" value="Mercedes">
+            </div>
+            <div class="fields-item">
+                <label for="">Модель</label>
+                <input type="text" name="" id="" value="Benz">
+            </div>
+            <div class="fields-item">
+                <label for="">год выпуска</label>
+                <input type="text" name="" id="" value="2010">
+            </div>
+            <div class="fields-item">
+                <label for="">паллеты</label>
+                <input type="text" value="2">
+            </div>
+            <div class="fields-item">
+                <label for="">габариты основного отсека (м)</label>
+                <div class="fields-item__box">
+                    <input type="text" placeholder="Д" value="6">
+                    <span>x</span>
+                    <input type="text" placeholder="Ш" value="2">
+                    <span>x</span>
+                    <input type="text" placeholder="В" value="2.5">
+                </div>
+            </div>
+            <div class="fields-item">
+                <label for="">грузоподъемность (т)</label>
+                <input type="text" name="" id="" value="3">
+            </div>
+        </div>
+        <div class="add-option">
+            <span class="ic add-option"></span>
+            <p class="add-text">Добавить прицеп</p>
+            <p class="hidden-text">Удалить прицеп</p>
+        </div>
+        <div class="fields trailer">
+            <div class="fields-item">
+                <label class="grey">Номер прицепа</label>
+                <input type="text" value="4658 AX-3">
+            </div>
+            <div class="fields-item">
+                <label class="grey">Паллеты</label>
+                <input type="number" value="2">
+            </div>
+            <div class="fields-item">
+                <label class="grey">Габариты(М)</label>
+                <div class="fields-item__box">
+                    <input type="text" placeholder="Д" value="3">
+                    <span>x</span>
+                    <input type="text" placeholder="Ш" value="2">
+                    <span>x</span>
+                    <input type="text" placeholder="В" value="2">
+                </div>
+            </div>
+            <div class="fields-item">
+                <label class="grey">грузоподъемность (т)</label>
+                <input type="text" value="1.5">
+            </div>
+
+        </div>
+        <div class="fields files">
+            <div class="attach-images drop-area">
+                <input type="file" name="images" multiple="" accept="image/png, image/jpeg">
+                <span class="ic images"></span>
+                <label for="files">Загрузить фото авто</label>
+            </div>
+            <div class="attach-files drop-area">
+                <input type="file" name="files" multiple="">
+                <span class="ic files"></span>
+                <label for="files">Загрузить документ</label>
+            </div>
+        </div>
+        <div class="attached-files photos">
+            <div class="attached-files__block image">
+                <img src="/img/car-image-1.png" alt="">
+            </div>
+            <div class="attached-files__block image">
+                <img src="/img/car-image-2.png" alt="">
+            </div>
+            <div class="attached-files__block image">
+                <img src="/img/car-image-3.png" alt="">
+            </div>
+            <div class="attached-files__block image">
+                <img src="/img/car-image-2.png" alt="">
+            </div>
+            <div class="attached-files__block image">
+                <img src="/img/car-image-3.png" alt="">
+            </div>
+        </div>
+        <div class="attached-files docs">
+            <a href="" download class="attached-files__block doc">
+                <div class="ext">PDF</div>
+                <div class="name">Договор автомобильной перевозки груза.pdf <span>(236 Кб)</span></div>
+            </a>
+            <div class="attached-files__block doc">
+
+            </div>
+        </div>
+        <div class="submit">
+            <button class="flat-btn yellow">Сохранить</button>
+        </div>
+    </form>
+</div>
+
+<div id="add-documents" class="popup popup-docs" style="display:none">
+    <div class="title">Документы</div>
+    <form class="attach-files drop-area">
+        <input type="file" name="files" multiple="">
+        <span class="ic files"></span>
+        <label for="files">Загрузить документ</label>
+    </form>
+    <div class="document-items">
+        <a href="#" download="" class="item">
+            <strong class="item-extension">PDF</strong>
+            <p class="item-filename">
+                Договор автомобильной перевозки груза.pdf
+                <span>(236 Кб)</span>
+            </p>
+        </a>
+        <a href="#" download="" class="item">
+            <strong class="item-extension">PDF</strong>
+            <p class="item-filename">
+                Договор автомобильной перевозки груза.pdf
+                <span>(236 Кб)</span>
+            </p>
+        </a>
+        <a href="#" download="" class="item">
+            <strong class="item-extension">TXT</strong>
+            <p class="item-filename">
+                Договор фрахтования для перевозки.pdf
+                <span>(236 Кб)</span>
+            </p>
+        </a>
+    </div>
+</div>
+
+
 
 
 
@@ -153,6 +727,28 @@
 <script src="../tooltipster/dist/js/tooltipster.bundle.min.js"></script>
 
 <script src="/js/main.js"></script>
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate"></script>
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
+
+<script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+            navigator.serviceWorker
+                .register("/sw.js")
+                .then(function (registration) {
+                    console.log(
+                        "Service worker successfully registered on scope",
+                        registration.scope
+                    );
+                })
+                .catch(function (error) {
+                    console.log("Service worker failed to register");
+                });
+        });
+    }
+</script>
 
 </body>
 

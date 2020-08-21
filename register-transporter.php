@@ -104,12 +104,12 @@
                                 </div>
                             </div>
                             <div class="attach-images drop-area">
-                                <input type="file" name="images" id="images" multiple accept="image/png, image/jpeg">
+                                <input type="file" name="images" id="" multiple accept="image/png, image/jpeg">
                                 <span class="ic images"></span>
                                 <label for="files">Загрузить фото авто</label>
                             </div>
                             <div class="attach-files drop-area">
-                                <input type="file" name="files" id="files" multiple>
+                                <input type="file" name="files" id="" multiple>
                                 <span class="ic files"></span>
                                 <label for="files">Загрузить документ</label>
                             </div>
@@ -124,7 +124,7 @@
                                 </div>
                             </div>
                             <div class="submit">
-                                <button type="submit" class="flat-btn yellow">Отправить</button>
+                                <button type="submit" class="flat-btn yellow">Зарегистрироваться</button>
                             </div>
                         </form>
                     </div>

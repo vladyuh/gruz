@@ -1,0 +1,10 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+        "namespace": "android_app",
+        "package_name": "ru.promicom.gruzok.twa",
+        "sha256_cert_fingerprints": [
+            "A5:BD:36:BB:4C:3A:28:FB:B7:19:1C:E6:4C:20:3E:5A:90:7D:C1:64:A8:51:E0:E8:41:93:84:C5:8F:8F:96:5E"
+        ]
+    }
+}]

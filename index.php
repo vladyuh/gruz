@@ -46,9 +46,10 @@
         <div class="calculate" id="calc">
             <div class="wrapper">
                 <div class="inner">
-                    <a href="#calculate" data-fancybox class="calculate-toggle">
+                    <a class="calculate-toggle calculate-form__toggle">
                         <span class="ic calc"></span>
                         <p>Онлайн калькулятор</p>
+                        <span class="ic close-bl"></span>
                     </a>
                     <div class="block-heading">Калькулятор</div>
                     <form action="" class="calculate-form" id="calculate">
@@ -183,6 +184,13 @@
                                     <label>Телефон</label>
                                     <input type="tel" name="phone">
                                 </div>
+                                <div class="fields-item select">
+                                    <label>Cпособ оплаты</label>
+                                    <select name="car-model" id=""> 
+                                        <option value="Наличными">Наличными</option>
+                                        <option value="Картой">Картой</option>
+                                    </select>
+                                </div>
                                 <div class="fields-item prim optional">
                                     <label>Примечание</label>
                                     <input type="text" name="remark">
@@ -194,7 +202,7 @@
                                 <p class="hidden-text">Убрать примечание</p>
                             </div>
                             <div class="submit">
-                                <button class="flat-btn yellow">Заказать</button>
+                                <div class="flat-btn yellow" id="calculator-submit-button">Заказать</div>
                             </div>
                         </div>
                     </form>
@@ -309,54 +317,6 @@
                                             <div class="item-price">за 2 040 руб.</div>
                                             <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
                                             <div class="item-text"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab">
-                                    <div class="services-items">
-                                       
-                                        <div class="item">
-                                            <div class="item-name">Дачный переезд</div>
-                                            <div class="item-price">за 2 040 руб.</div>
-                                            <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
-                                            <div class="item-text"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab">
-                                    <div class="services-items">
-                                        <div class="item">
-                                            <div class="item-name">Квартирный переезд</div>
-                                            <div class="item-price">за 2 040 руб.</div>
-                                            <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
-                                            <div class="item-text">
-                                                Подадим газель с грузчиками и без. Бесплатно спустим и поднимем на этаж.
-                                                Надежно упакуем вашу мебель и ваши вещи.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab">
-                                    <div class="services-items">
-                                       
-                                        <div class="item">
-                                            <div class="item-name">Дачный переезд</div>
-                                            <div class="item-price">за 2 040 руб.</div>
-                                            <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
-                                            <div class="item-text"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab">
-                                    <div class="services-items">
-                                        <div class="item">
-                                            <div class="item-name">Квартирный переезд</div>
-                                            <div class="item-price">за 2 040 руб.</div>
-                                            <a href="#callback" data-fancybox class="flat-btn yellow">Заказать</a>
-                                            <div class="item-text">
-                                                Подадим газель с грузчиками и без. Бесплатно спустим и поднимем на этаж.
-                                                Надежно упакуем вашу мебель и ваши вещи.
-                                            </div>
                                         </div>
                                     </div>
                                 </div>

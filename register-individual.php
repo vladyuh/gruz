@@ -45,8 +45,8 @@
                                         <input type="tel" name="phone" id="phone">
                                     </div>
                                     <div class="fields-item green">
-                                        <label class="grey" for="name">Ваш email (Логин)</label>
-                                        <input type="email" name="email" id="email">
+                                        <label class="grey" for="name">Email</label>
+                                        <input type="email" name="mail" id="mail">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -60,11 +60,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="attach-files drop-area">
-                                <input type="file" name="files" id="files" multiple>
-                                <span class="ic files"></span>
-                                <label for="files">Загрузить документ</label>
-                            </div>
                             <div class="agreement">
                                 <label class="switch">
                                     <input type="checkbox" checked="">
@@ -76,7 +71,7 @@
                                 </div>
                             </div>
                             <div class="submit">
-                                <button type="submit" class="flat-btn yellow">Отправить</button>
+                                <button type="submit" class="flat-btn yellow">Зарегистрироваться</button>
                             </div>
                         </form>
                     </div>

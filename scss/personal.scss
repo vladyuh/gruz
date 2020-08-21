@@ -7,6 +7,7 @@
         align-items: center;
         background: #fff;
         padding: 23px 30px;
+        height: 66px;
 
         a {
             display: block;
@@ -29,14 +30,31 @@
         }
 
         a:nth-last-child(2) {
-            margin-right: 0;
+            margin-right: auto;
+        }
+
+        .send-contract {
+            background: #00982f;
+            border: 1px solid #00982f;
+            box-sizing: border-box;
+            padding: 9px 12px 9px 44px;
+            margin-left: auto;
+            margin-right: 33px !important;
+            color: #fff;
+
+            &__smallscreen-text {
+                display: none;
+            }
+
+            span {
+                left: 15px;
+            }
         }
 
         a.exit {
             padding: 0;
             padding-right: 30px;
-            color: #A9A9A9;
-            margin-left: auto;
+            color: #a9a9a9;
             margin-right: 0;
 
             &>span {
@@ -48,7 +66,6 @@
             }
         }
     }
-
 }
 
 //профиль заказчика
@@ -66,7 +83,7 @@
 
     .left,
     .right {
-        width: 587px / 1200px * 100%;
+        width: 588px / 1200px * 100%;
     }
 
     &--info,
@@ -84,7 +101,7 @@
             font-weight: 600;
             font-size: 18px;
             line-height: 21px;
-            color: #A9A9A9;
+            color: #a9a9a9;
             margin-right: auto;
         }
 
@@ -93,11 +110,12 @@
             font-weight: 600;
             font-size: 14px;
             line-height: 17px;
-            color: #A9A9A9;
+            color: #a9a9a9;
             padding-left: 25px;
             position: relative;
             display: flex;
             align-items: center;
+            text-decoration: none;
 
             &>span {
                 position: absolute;
@@ -108,12 +126,43 @@
         }
     }
 
+    &__block-content {
+        .title {
+            margin: 40px 0 3px;
+            width: 100%;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 21px;
+            color: #a9a9a9;
+        }
+    }
+
     &--info {
         margin-bottom: 22px;
 
+        form {
+            margin-top: 23px;
+            width: 100%;
+
+            .fields-item {
+                margin-bottom: 18px;
+            }
+        }
+
+        .profile-customer__block-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
 
         .item {
             margin-top: 23px;
+            width: calc(50% - 35px);
+
+            &.fullwidth {
+                width: 100%;
+            }
         }
 
         .item-title {
@@ -122,7 +171,7 @@
             font-size: 12px;
             line-height: 14px;
             text-transform: uppercase;
-            color: #A9A9A9;
+            color: #a9a9a9;
             margin-bottom: 5px;
         }
 
@@ -136,15 +185,14 @@
     }
 
     &--password {
-
         form {
             margin-top: 23px;
+            width: 100%;
 
             .fields-item {
                 margin-bottom: 18px;
             }
         }
-
     }
 
     &--docs {
@@ -161,7 +209,7 @@
             font-size: 14px;
             line-height: 17px;
             overflow-y: auto;
-            height: 372px / 525px * 100%;
+            max-height: 372px;
 
             &::-webkit-scrollbar {
                 width: 5px;
@@ -176,19 +224,19 @@
 
             /* Handle */
             &::-webkit-scrollbar-thumb {
-                background: #D8D8D8;
+                background: #d8d8d8;
             }
-
 
             .item {
                 display: flex;
                 align-items: center;
-                border-top: 1px solid #D4D4D4;
+                border-top: 1px solid #d4d4d4;
                 padding: 16px 25px 16px 0;
+                text-decoration: none;
             }
 
             .item-extension {
-                color: #00982F;
+                color: #00982f;
                 text-transform: uppercase;
                 font-weight: 600;
                 margin-right: 15px;
@@ -198,19 +246,16 @@
                 color: #000000;
 
                 &>span {
-                    color: #A9A9A9;
+                    color: #a9a9a9;
                 }
             }
-
         }
-
     }
 }
 
 //заказы
 .profile-orders {
     padding-bottom: 75px;
-
 
     .content {
         padding: 29px 28px 40px;
@@ -253,7 +298,6 @@
     .right {
         width: 588px / 1200px * 100%;
 
-
         #order-map {
             min-height: 0;
             height: 100%;
@@ -265,7 +309,7 @@
         font-weight: 600;
         font-size: 18px;
         line-height: 21px;
-        color: #A9A9A9;
+        color: #a9a9a9;
         padding-bottom: 20px;
     }
 
@@ -288,14 +332,13 @@
             font-size: 12px;
             line-height: 14px;
             text-transform: uppercase;
-            color: #A9A9A9;
+            color: #a9a9a9;
             margin-bottom: 5px;
 
             &.status {
-                color: #00982F;
+                color: #00982f;
             }
         }
-
 
         .item-value {
             font-style: normal;
@@ -338,6 +381,14 @@
 
     .content {
         display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bottom {
+        width: 100%;
+        margin-top: 23px;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .left {
@@ -349,7 +400,8 @@
     }
 
     .left,
-    .right {
+    .right,
+    .bottom>div {
         width: 588px / 1200px * 100%;
     }
 
@@ -361,7 +413,6 @@
     .right {
         display: flex;
         flex-direction: column;
-
     }
 
     &--info {
@@ -385,7 +436,7 @@
 
                 .item-value span {
                     margin: 0 15px;
-                    color: #D8D8D8;
+                    color: #d8d8d8;
                 }
             }
         }
@@ -436,9 +487,8 @@
 
                 /* Handle */
                 &::-webkit-scrollbar-thumb {
-                    background: #D8D8D8;
+                    background: #d8d8d8;
                 }
-
 
                 .item {
                     margin-top: 0;
@@ -452,11 +502,7 @@
                     height: auto;
                 }
             }
-
-
         }
-
-
     }
 
     &--status {
@@ -477,19 +523,207 @@
         }
 
         .title strong {
-            color: #00982F;
+            color: #00982f;
         }
     }
 
     &--docs {
         flex-grow: 1;
     }
+}
 
+.profile-company {
+    &--info {
+        height: 100%;
+    }
+
+    .additem-btn {
+        display: flex;
+        text-decoration: none;
+
+        p {
+            margin-left: 12px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+        }
+    }
+
+    .bottom {
+        justify-content: space-between;
+    }
+
+    &__drivers,
+    &__autos,
+    &__movers {
+        background: #fff;
+        padding: 28px 32px 33px 30px;
+
+        &--list {
+            max-height: 205px;
+            overflow-y: auto;
+            margin-top: 19px;
+            padding-right: 20px;
+
+            &::-webkit-scrollbar {
+                width: 5px;
+                height: 31px;
+                position: relative;
+            }
+
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: #f8f8f8;
+            }
+
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #d8d8d8;
+            }
+
+            .item {
+                display: flex;
+                padding: 10px 3px 16px;
+                align-items: center;
+                border-top: 1px solid #d4d4d4;
+            }
+
+            .item:last-child {
+                border-bottom: 1px solid #d4d4d4;
+            }
+
+            .item-icon {
+                margin-right: 15px;
+                position: relative;
+            }
+
+            .item-status {
+                width: 8px;
+                height: 8px;
+                top: 1px;
+                right: 2px;
+                border-radius: 50%;
+                position: absolute;
+
+                &.green {
+                    background: #00982f;
+                }
+
+                &.yellow {
+                    background: #f6e646;
+                }
+            }
+
+            .item-icon img {
+                width: 39px;
+                height: 39px;
+                border-radius: 37px;
+            }
+
+            .item-name,
+            .item-number {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                color: #000000;
+                width: 160px / 500px * 100%;
+                margin-right: auto;
+                text-decoration: none;
+            }
+
+            span.phone {
+                display: none;
+            }
+
+            .item-edit,
+            .item-docs {
+                margin-right: 22px;
+            }
+
+            .item-edit,
+            .item-remove,
+            .item-docs {
+                span.ic {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.company-orders {
+
+    &__table {
+
+        .table__head {
+
+
+            .from,
+            .to {
+                width: 150px;
+                text-align: center !important;
+
+                .table__cell-content {
+                    justify-content: center;
+                }
+            }
+
+        }
+    }
+
+    .table .table__cell {
+
+        .trailer {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 14px;
+            text-transform: uppercase;
+            color: #A9A9A9;
+        }
+
+        &.auto,
+        &.driver,
+        &.mover {
+            text-align: left !important;
+
+            .table__cell-content {
+                justify-content: flex-start !important;
+            }
+
+
+        }
+
+
+    }
 
 }
 
-
 @media screen and (max-width: 1110px) {
+
+    .company-orders {
+
+        .table .table__cell {
+
+            &.auto,
+            &.driver,
+            &.mover {
+                text-align: center !important;
+
+                .table__cell-content {
+                    justify-content: center !important;
+                }
+
+
+            }
+
+
+        }
+
+    }
 
     .profile-orders__table .table__row.active .table__cell:first-child::after {
         display: none;
@@ -513,8 +747,7 @@
         font-size: 12px;
         line-height: 14px;
         text-transform: uppercase;
-        color: #A9A9A9;
-
+        color: #a9a9a9;
     }
 
     .profile-orders__table .table__cell.number {
@@ -533,26 +766,43 @@
         width: 50%;
         text-align: right;
     }
-
-
-
-
 }
 
 @media screen and (max-width: 1000px) {
+    .profile-company {
+        .left {
+            order: 1;
+        }
+
+        .bottom {
+            order: 2;
+        }
+
+        .right {
+            order: 3;
+        }
+    }
 
     //профиль
 
     .profile-customer .left,
-    .profile-customer .right {
+    .profile-customer .right,
+    .profile-contractor .bottom>div {
         width: 100%;
+    }
+
+    .profile-contractor .bottom {
+        margin-top: 0;
+    }
+
+    .profile-contractor .bottom>div {
+        margin-top: 23px;
     }
 
     .profile-customer--password {
         margin-bottom: 22px;
 
         form {
-
             .fields {
                 display: flex;
                 justify-content: space-between;
@@ -561,9 +811,7 @@
             .fields-item {
                 width: calc(50% - 12.5px);
             }
-
         }
-
     }
 
     .order-detail .content {
@@ -582,7 +830,6 @@
     }
 
     .profile-contractor {
-
         .content {
             flex-wrap: wrap;
         }
@@ -604,9 +851,7 @@
             margin-top: 23px;
             margin-bottom: 0;
         }
-
     }
-
 }
 
 @media screen and (max-width: 830px) {
@@ -615,15 +860,59 @@
     .profile-orders__status {
         width: 100%;
     }
+}
 
+@media screen and (max-width: 768px) {
+    .personal-nav .content a {
+        margin-right: 35px;
+    }
+
+    .personal-nav .content a.exit {
+        p {
+            display: none;
+        }
+    }
 }
 
 @media screen and (max-width: 640px) {
 
+    .company-orders {
+
+        .table .table__cell {
+
+            &.auto,
+            &.driver,
+            &.mover {
+                text-align: left !important;
+
+                .table__cell-content {
+                    justify-content: flex-start !important;
+                }
+
+
+            }
+
+
+        }
+
+    }
+
+
+    .personal-nav .content .send-contract {
+        margin: 0 auto !important;
+
+        &__main-text {
+            display: none;
+        }
+
+        &__smallscreen-text {
+            display: block;
+        }
+    }
+
     //профиль
 
     .orders-table .table__cell.buttons {
-
         .table__cell-content>*:first-child {
             margin-right: auto;
         }
@@ -651,7 +940,7 @@
                 font-weight: 600;
                 font-size: 15px;
                 text-align: center;
-                color: #FFFFFF;
+                color: #ffffff;
                 padding: 10px 5px;
             }
         }
@@ -659,17 +948,15 @@
         a.add-photos,
         a.rate,
         a.about-order {
-            border: 2px solid #A9A9A9;
-
+            border: 2px solid #a9a9a9;
 
             p {
-                color: #A9A9A9;
+                color: #a9a9a9;
             }
         }
 
-        a.abort p,
-            {
-            color: #A9A9A9;
+        a.abort p {
+            color: #a9a9a9;
         }
 
         a.in-road p {
@@ -678,9 +965,7 @@
     }
 
     .profile-customer--password {
-
         form {
-
             .fields {
                 flex-direction: column;
             }
@@ -688,14 +973,12 @@
             .fields-item {
                 width: 100%;
             }
-
         }
-
     }
 
     .profile-orders__table .table__row {
         margin-bottom: 15px;
-        border: 1px solid #D4D4D4;
+        border: 1px solid #d4d4d4;
         padding: 5px 0;
         background: #fff !important;
     }
@@ -744,7 +1027,6 @@
         height: 37px;
         width: 16px;
         background: url(/img/icons/svg/ic_arrow-to.svg), no-repeat;
-
     }
 
     .profile-orders__table .table__cell span.star {
@@ -758,11 +1040,42 @@
 }
 
 @media screen and (max-width: 550px) {
+    .profile-company .additem-btn {
+
+        span.ic {
+            background-image: url(../img/icons/svg/ic_plus-15.svg);
+            width: 15px;
+            height: 100%;
+        }
+
+        p {
+            display: none;
+        }
+    }
+
+    .profile-company__drivers--list .item-number,
+    .profile-company__movers--list .item-number {
+        width: 15px;
+    }
+
+    .profile-company__drivers--list span.phone,
+    .profile-company__movers--list span.phone {
+        display: block;
+    }
+
+    .profile-company__drivers--list .item-number p,
+    .profile-company__movers--list .item-number p {
+        display: none;
+    }
 
     //профиль
 
     .personal-nav .content a {
-        margin-right: 60px;
+        margin-right: 40px;
+    }
+
+    .personal-nav .content a:nth-child(2) {
+        margin-right: auto;
     }
 
     .profile-customer__block-head .edit-btn {
@@ -777,28 +1090,33 @@
         margin-right: 0 !important;
     }
 
-
-
 }
 
 @media screen and (max-width: 480px) {
 
 
+    .profile-company__autos--list .item-number {
+        max-width: 80px;
+    }
+
+    .profile-company__drivers,
+    .profile-company__autos,
+    .profile-company__movers {
+        padding: 23px 20px 20px;
+    }
+
+    .profile-company__drivers--list,
+    .profile-company__autos--list,
+    .profile-company__movers--list {
+        padding-right: 5px;
+    }
 
     .personal-nav .content {
         background: none;
         padding-left: 5px;
         padding-right: 5px;
-    }
-
-    .personal-nav .content a {
-        margin-right: 50px;
-    }
-
-    .personal-nav .content a.exit {
-        p {
-            display: none;
-        }
+        flex-wrap: wrap;
+        height: auto;
     }
 
     //профиль
@@ -844,7 +1162,6 @@
             right: 0;
             width: 100%;
             height: 100%;
-
         }
     }
 
@@ -854,7 +1171,66 @@
     }
 }
 
+@media screen and (max-width: 440px) {
+    .personal-nav .content .send-contract {
+        width: 100%;
+        order: 1;
+        margin-top: 23px !important;
+        text-align: center;
+        padding-left: 44px;
+        padding-right: 44px;
+
+        &__main-text {
+            display: block;
+        }
+
+        &__smallscreen-text {
+            display: none;
+        }
+    }
+}
+
 @media screen and (max-width: 375px) {
+
+
+    .personal-nav .content .send-contract span.ic {
+        background-image: url(../img/icons/svg/ic_contract.svg);
+        left: 15px;
+    }
+
+    .profile-company {
+
+        &__drivers--list,
+        &__autos--list,
+        &__movers--list {
+            .item-icon {
+                margin-right: 12px;
+            }
+
+            .item-icon img {
+                width: 30px;
+                height: 30px;
+            }
+
+            .item-edit,
+            .item-docs {
+                margin-right: 12px;
+            }
+
+            .item-number,
+            .item-name {
+                font-size: 13px;
+            }
+        }
+
+        &__autos--list {
+            .item-name {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
 
     //профиль
 
@@ -867,10 +1243,8 @@
     }
 
     .profile-customer--docs .attach-files {
-
         flex-direction: row !important;
         padding: 20px 0;
-
     }
 
     .profile-customer--docs .attach-files label {
@@ -900,9 +1274,7 @@
         padding: 10px 0;
     }
 
-
     .personal-nav .content a {
-        margin-right: 40px;
+        margin-right: 30px;
     }
-
 }

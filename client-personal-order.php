@@ -93,35 +93,29 @@
                                 Документы
                             </div>
                             <div class="order-detail__block-content">
-                                <form class="attach-files drop-area">
-                                    <input type="file" name="files" id="files" multiple>
-                                    <span class="ic files"></span>
-                                    <label for="files">Загрузить документ</label>
-                                </form>
                                 <div class="document-items">
-                                    <div class="item">
+                                    <a href="#" download class="item">
                                         <strong class="item-extension">PDF</strong>
                                         <p class="item-filename">
                                             Договор автомобильной перевозки груза.pdf
                                             <span>(236 Кб)</span>
                                         </p>
-                                    </div>
-                                    <div class="item">
+                                    </a>
+                                    <a href="#" download class="item">
                                         <strong class="item-extension">TXT</strong>
                                         <p class="item-filename">
                                             Договор фрахтования для перевозки.pdf
                                             <span>(236 Кб)</span>
                                         </p>
-                                    </div>
-                                    <div class="item">
+                                    </a>
+                                    <a href="#" download class="item">
                                         <strong class="item-extension">PDF</strong>
                                         <p class="item-filename">
                                             Договор об организации автомобильных перевозок грузов — при систематических
                                             перевозках грузов.pdf
                                             <span>(236 Кб)</span>
                                         </p>
-                                    </div>
-
+                                    </a>                                    
                                 </div>
                             </div>
                         </div>

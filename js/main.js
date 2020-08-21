@@ -1,5 +1,40 @@
 $(document).ready(function () {
+  /* $('.calculate-form__toggle').click(function () {
+    $(this).parents('.calculate').toggleClass('active');
+    $('body').toggleClass('fixed');
+  }); */
+
+  //тогл открытия форм
+  function formToggle(element, parent) {
+    $(element).click(function () {
+      $(element).parents(parent).toggleClass("active");
+      $("body").toggleClass("fixed");
+    });
+  }
+
+  formToggle(".calculate-form__toggle", ".calculate");
+  formToggle(".services-form__toggle", ".services-form");
+  formToggle(".clients-form__toggle", ".clients-form");
+
+  //закрытие форм после 480px при ресайзе
+  $(window).on("resize", function () {
+    if ($(window).width() > 480) {
+      $(".calculate,.services-form,.clients-form").removeClass("active");
+      if (
+        !$(".calculate").hasClass("active") ||
+        !$(".services-form").hasClass("active") ||
+        !$(".clients-form").hasClass("active")
+      ) {
+        $("body").removeClass("fixed");
+      }
+    }
+  });
+
   //Инициализация слайдера "Автопарк"
+  if ($(".autopark-slider .item").length < 4) {
+    $(".autopark").find(".slider-nav .prev").hide();
+    $(".autopark").find(".slider-nav .next").hide();
+  }
 
   var autopark = $(".autopark-slider");
 
@@ -10,7 +45,8 @@ $(document).ready(function () {
     arrows: false,
     dots: true,
     appendDots: $(".autopark .slider-nav .dots"),
-    responsive: [{
+    responsive: [
+      {
         breakpoint: 1111,
         settings: {
           slidesToShow: 3,
@@ -44,6 +80,10 @@ $(document).ready(function () {
     autopark.slick("slickNext");
   });
 
+  $(".switch .form-group,.switch .checkbox").on("click", function () {
+    $(this).toggleClass("active");
+  });
+
   //+ 1 к значению в форме
 
   $(".ic.plus").on("click", function () {
@@ -58,7 +98,8 @@ $(document).ready(function () {
 
   $(".ic.minus").on("click", function () {
     var old = $(this).parents(".input-box").find('input[type="number"]').val();
-    if (old == 0) {} else {
+    if (old == 0) {
+    } else {
       $(this)
         .parents(".input-box")
         .find('input[type="number"]')
@@ -67,7 +108,6 @@ $(document).ready(function () {
   });
 
   //Показать дополнительные поля в форме
-
   $(".column .add-option").on("click", function () {
     if ($(this).hasClass("active")) {
       $(this).find(".add-text").show();
@@ -93,27 +133,8 @@ $(document).ready(function () {
     }
   });
 
-  $(".register-form div.add-option").on("click", function () {
-    if ($(this).hasClass("active")) {
-      $(this).find(".add-text").show();
-      $(this).find(".hidden-text").hide();
-      $(this)
-        .find("span.ic")
-        .removeClass("remove-option")
-        .addClass("add-option");
-      $(this).parents(".row").find(".fields-item.optional").removeClass("show");
-      $(this).removeClass("active");
-    } else {
-      $(this).find(".add-text").hide();
-      $(this).find(".hidden-text").show();
-      $(this)
-        .find("span.ic")
-        .addClass("remove-option")
-        .removeClass("add-option");
-      $(this).parents(".row").find(".fields-item.optional").addClass("show");
-      $(this).addClass("active");
-    }
-  });
+  $(".register-form .form-tabs__tab").hide();
+  $(".register-form .form-tabs__tab:first").show();
 
   //Активация полей "Грузчики" на главной
 
@@ -241,37 +262,16 @@ $(document).ready(function () {
 
   advantagesSlider(".advantages-items", 481);
 
-  //Карта в Контактах
-
-  if ($("div#map").length != 0) {
-    ymaps.ready(function () {
-      var myMap = new ymaps.Map("map", {
-          center: [53.900702, 29.814526],
-          zoom: 9,
-          controls: [],
-        }),
-        myPlacemark = new ymaps.Placemark(
-          [53.912107, 30.319875], {
-            hintContent: "",
-            balloonContent: "",
-          }, {
-            iconLayout: "default#image",
-            iconImageHref: "../img/map-marker.png",
-            iconImageSize: [30, 40],
-            iconImageOffset: [-5, -38],
-          }
-        );
-
-      myMap.geoObjects.add(myPlacemark);
-    });
-  }
-
   //маска телефона
 
-  if ($('input[type="tel"]').length != 0) {
-    var im = new Inputmask("+375 (99) 999-99-99");
-    im.mask('input[type="tel"]');
+  function initPhonemask() {
+    if ($('input[type="tel"]').length != 0) {
+      var im = new Inputmask("+375 (99) 999-99-99");
+      im.mask('input[type="tel"]');
+    }
   }
+
+  initPhonemask();
 
   //скрытие хедера при прокрутке
 
@@ -297,7 +297,8 @@ $(document).ready(function () {
 
       if (Math.abs(lastScrollTop - st) <= delta) return;
 
-      if ($(".header-content__m--menu").hasClass("open")) {} else {
+      if ($(".header-content__m--menu").hasClass("open")) {
+      } else {
         if (st > lastScrollTop && st > navbarHeight) {
           $("header").removeClass("nav-down").addClass("nav-up");
         } else {
@@ -314,41 +315,33 @@ $(document).ready(function () {
   show_hide();
 
   //Загрузка файлов
-  var $fileInput = $('input[type="file"]');
-  var $droparea = $(".drop-area");
 
-  $fileInput.each(function () {
-    $(this).on("dragenter focus click", function () {
-      $(this).parents(".drop-area").addClass("is-active");
-    });
+  $("body").on("dragenter click", '.drop-area input[type="file"]', function () {
+    var parent = $(this).parents(".drop-area");
+    parent.addClass("is-active");
+  });
 
-    $(this).on("dragleave blur drop", function () {
-      $(this).parents(".drop-area").removeClass("is-active");
-    });
+  $("body").on(
+    "dragleave blur drop",
+    '.drop-area input[type="file"]',
+    function () {
+      var parent = $(this).parents(".drop-area");
+      parent.removeClass("is-active");
+    }
+  );
 
-    $(this).on("change", function () {
-      var filesCount = $(this)[0].files.length;
-      var $textContainer = $(this).parents(".drop-area").find("label");
+  $("body").on("change", '.drop-area input[type="file"]', function () {
+    var parent = $(this).parents(".drop-area");
 
-      if (filesCount === 1) {
-        // if single file is selected, show file name
-        var fileName = $(this).val().split("\\").pop();
-        $textContainer.text(fileName);
-      } else {
-        // otherwise show number of files
-        $textContainer.text(filesCount + " файла(ов) выбрано");
-      }
+    var filesCount = $(this).prop("files").length;
+    var textContainer = parent.find("label");
 
-      if (
-        (filesCount > 0 &&
-          filesCount != null &&
-          !$(this).parents("form").has('input[type="submit"]')) ||
-        !$(this).parents("form").has('button[type="submit"]')
-      ) {
-        alert("Submit");
-        $(this).closest("form").submit();
-      }
-    });
+    if (filesCount === 1) {
+      var fileName = $(this).val().split("\\").pop();
+      textContainer.text(fileName);
+    } else {
+      textContainer.text(filesCount + " файла(ов) выбрано");
+    }
   });
 
   $("#status").change(function () {
@@ -365,26 +358,7 @@ $(document).ready(function () {
 
   $("input:radio").change(function () {
     var userRating = this.value;
-    /* alert(userRating); */
   });
-
-  /* $fileInput.on("change", function () {
-    var filesCount = $(this)[0].files.length;
-    var $textContainer = $(this).parents(".drop-area").find("label");
-
-    if (filesCount === 1) {
-      // if single file is selected, show file name
-      var fileName = $(this).val().split("\\").pop();
-      $textContainer.text(fileName);
-    } else {
-      // otherwise show number of files
-      $textContainer.text(filesCount + " файла(ов) выбрано");
-    }
-
-    if (filesCount > 0 && filesCount != null) {
-      $(this).closest("form").submit();
-    }
-  }); */
 
   //photos preview
   var imagesPreview = function (input, placeToInsertImagePreview) {
@@ -441,9 +415,6 @@ $(document).ready(function () {
     $(this).slideUp();
   });
 
-  var uls = $(".header-mobile--nav > ul > li").has("ul");
-  console.log(uls);
-
   $(".header-mobile--nav ul > li").each(function () {
     if ($(this).children("ul").length > 0) {
       $(this).prepend('<span class="ic more"></span>');
@@ -463,16 +434,45 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 
-  $('.autopark-detail .filter input').on('click', function () {
-    $('.autopark-detail .item').hide();
+  $(".autopark-detail .filter input").on("click", function () {
+    $(".autopark-detail .item").hide();
     $(".autopark-detail .filter :checkbox:checked").each(function () {
       $("." + $(this).val()).show();
     });
 
-    if ($('.autopark-detail :checkbox:checked').length == 0) {
-      $('.autopark-detail .item').show();
+    if ($(".autopark-detail :checkbox:checked").length == 0) {
+      $(".autopark-detail .item").show();
     }
+  });
 
+  $(".typeof-select").click(function () {
+    $(this).find(".typeof-entity__selected-items").slideToggle();
+  });
+
+  $(".typeof-entity__selected-items .value").click(function () {
+    var parent = $(this).parents(".typeof-select");
+    parent.find(".typeof-entity__selected-items").slideUp();
+  });
+
+  $(".typeof-entity__selected-items .tab-toggle").click(function () {
+    $(this).parents(".register-form").find(".form-tabs__tab").hide();
+    $(this)
+      .parents(".register-form")
+      .find(".form-tabs__tab")
+      .eq($(this).index())
+      .show();
+    $(this)
+      .parents(".typeof-entity__select")
+      .find(".value span")
+      .text($(this).text());
+  });
+
+  //штат компании
+
+  $(".typeof-entity__select select").on("change", function () {
+    $(this).parents(".register-form").find(".form-tabs__tab").hide();
+    var index = $(this).prop("selectedIndex");
+    $(this).parents(".register-form").find(".form-tabs__tab").eq(index).show();
   });
 
   if ($("#order-map").length != 0) {
@@ -497,7 +497,8 @@ $(document).ready(function () {
       });
 
       // Создание экземпляра маршрута.
-      multiRoute = new ymaps.multiRouter.MultiRoute({
+      multiRoute = new ymaps.multiRouter.MultiRoute(
+        {
           // Точки маршрута.
           // Обязательное поле.
           referencePoints: referencePoints,
@@ -555,4 +556,125 @@ $(document).ready(function () {
       });
     }
   }
+
+  //добавления водителей
+
+  $(".register-form").on(
+    "click",
+    ".add-drivers span.ic.add-option",
+    function () {
+      var parent = $(".register-form fieldset#drivers .fields");
+      var driverFields = parent.find(".row.drivers").eq(0).clone();
+      driverFields.find("input,textarea").val("");
+      driverFields.prepend(
+        '<div class="remove"><span class="ic delete"></span></div>'
+      );
+      parent.append(driverFields);
+
+      initPhonemask();
+    }
+  );
+
+  $(".register-form").on("click", ".row.drivers span.ic.delete", function () {
+    $(this).parents(".row.drivers").remove();
+  });
+
+  //добавления грузчиков
+
+  $(".register-form").on(
+    "click",
+    ".add-porters span.ic.add-option",
+    function () {
+      var parent = $(".register-form fieldset#porters .fields");
+      var porterFields = parent
+        .parents("fieldset#porters")
+        .find(".row.porters")
+        .eq(0)
+        .clone();
+      porterFields.find("input,textarea").val("");
+      porterFields.prepend(
+        '<div class="remove"><span class="ic delete"></span></div>'
+      );
+      parent.append(porterFields);
+
+      initPhonemask();
+    }
+  );
+
+  $(".register-form").on("click", ".row.porters span.ic.delete", function () {
+    $(this).parents(".row.porters").remove();
+  });
+
+  //добавление прицепа
+
+  $("#add-car").on("click", ".add-trailer span.ic.add-option", function () {
+    $(this).toggleClass("active remove-option");
+    $(this).parents("form").find(".fields.trailer").toggleClass("active");
+    var inputs = $(this)
+      .parents("form")
+      .find(".fields-item.pallets,.fields-item.dimensions");
+    if ($(this).hasClass("active")) {
+      $(this).parents(".add-trailer").find(".add-text").hide();
+      $(this).parents(".add-trailer").find(".hidden-text").show();
+      inputs.find("input").attr("disabled", true);
+    } else {
+      $(this).parents(".add-trailer").find(".add-text").show();
+      $(this).parents(".add-trailer").find(".hidden-text").hide();
+      inputs.find("input").attr("disabled", false);
+    }
+  });
+
+  $(".register-form").on(
+    "click",
+    ".add-trailer span.ic.add-option",
+    function () {
+      $(this).toggleClass("active remove-option");
+      $(this)
+        .parents("#autos .fields")
+        .find(".row.trailer")
+        .toggleClass("active");
+      var inputs = $(this)
+        .parents(".fields")
+        .find(".fields-item.pallets,.fields-item.dimensions");
+      if ($(this).hasClass("active")) {
+        $(this).parents(".add-trailer").find(".add-text").hide();
+        $(this).parents(".add-trailer").find(".hidden-text").show();
+        inputs.find("input").attr("disabled", true);
+      } else {
+        $(this).parents(".add-trailer").find(".add-text").show();
+        $(this).parents(".add-trailer").find(".hidden-text").hide();
+        inputs.find("input").attr("disabled", false);
+      }
+    }
+  );
+
+  //добавление автомобилей
+  $(".register-form").on("click", ".add-car span.ic.add-option", function () {
+    var parent = $(".register-form fieldset#autos .add-option.add-car");
+    var autoFields = parent
+      .parents("fieldset#autos")
+      .find(".fields")
+      .eq(0)
+      .clone();
+    autoFields.find(".fields-title").remove();
+    autoFields.find(".row.trailer").removeClass("active");
+    autoFields.find(".add-trailer .ic").removeClass("active remove-option");
+    autoFields.find(".add-trailer p").attr("style", "");
+    autoFields.find("input,textarea").val("");
+    autoFields
+      .find(".row.car")
+      .prepend('<div class="remove"><span class="ic delete"></span></div>');
+    parent.before(autoFields);
+  });
+
+  $(".register-form").on("click", ".row.car span.ic.delete", function () {
+    $(this).parents(".fields").remove();
+  });
+
+  $("#authorise .canHide.individ").hide();
+
+  $("#authorise").on("change", "select", function () {
+    $("#authorise .canHide").hide();
+    $("#authorise .canHide." + $(this).val()).show();
+  });
 });

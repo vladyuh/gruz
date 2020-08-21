@@ -196,7 +196,7 @@
                                         </a>
                                     </div>
                                     <form class="attach-images drop-area">
-                                        <input type="file" name="images" id="images" multiple=""
+                                        <input type="file" name="images" id="" multiple=""
                                             accept="image/png, image/jpeg">
                                         <span class="ic images"></span>
                                         <label for="files">Загрузить фото</label>
@@ -250,7 +250,7 @@
                             </div>
                             <div class="profile-customer__block-content">
                                 <form class="attach-files drop-area">
-                                    <input type="file" name="files" id="files" multiple>
+                                    <input type="file" name="files" id="" multiple>
                                     <span class="ic files"></span>
                                     <label for="files">Загрузить документ</label>
                                 </form>

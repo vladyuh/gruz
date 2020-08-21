@@ -39,7 +39,7 @@
                         </div>
                             <form action="">
                                 <div class="fields-item green">
-                                    <label for="email" class="grey">email (логин)</label>
+                                    <label for="email" class="grey">логин</label>
                                     <input type="email" name="email" id="email">
                                 </div>
                                 <div class="submit">

@@ -54,6 +54,99 @@ section.register {
 
 }
 
+.typeof-entity,
+.typeof-staff {
+    display: flex;
+    align-items: center;
+    padding: 16px 48px 16px 48px;
+    margin-bottom: 26px;
+    background: #fff;
+    max-width: 650px;
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+
+    &__icon {
+        position: absolute;
+        left: 23px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__toggle {
+        margin-left: auto;
+        position: absolute;
+        right: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__select {
+        padding: 0 20px;
+        width: 100%;
+
+        select {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            background: none;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            color: #000000;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            height: auto !important;
+        }
+
+
+        .title {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 14px;
+            text-transform: uppercase;
+            color: #A9A9A9;
+            margin-bottom: 5px;
+        }
+
+        .value {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            color: #000000;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            position: relative;
+        }
+
+    }
+
+    &__selected-items {
+        display: none;
+        position: absolute;
+        top: calc(100% + 5px);
+        left: -15px;
+        right: -15px;
+        background: #fff;
+        padding: 0 15px 15px;
+        z-index: 2;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+
+        .value,
+        .tab-toggle {
+            margin-top: 15px;
+            display: block;
+            text-decoration: none;
+        }
+    }
+
+}
+
 section.register-individual {
     padding-top: 30px;
     padding-bottom: 90px;
@@ -66,6 +159,11 @@ section.register-individual {
 section.register-entity {
     padding-top: 30px;
     padding-bottom: 90px;
+
+    .fields .row:not(:last-child) {
+        margin-bottom: 49px;
+    }
+
 
 }
 
@@ -93,10 +191,112 @@ section.register-transporter {
 
 .register-form {
 
+    .tooltip {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: calc(100% + 25px);
+        display: flex;
+        width: 309px;
+
+        span.ic {
+            margin-top: 5px;
+            margin-right: 9px;
+        }
+
+        p {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 150%;
+            color: #808080;
+        }
+    }
+
+    fieldset#autos {
+
+        .row {
+            margin-bottom: 0 !important;
+        }
+
+        .row.trailer {
+            display: none;
+
+            &.active {
+                display: flex;
+            }
+
+        }
+
+
+    }
+
+    .row {
+        .remove {
+            width: 100%;
+            margin-bottom: 10px;
+
+            .delete {
+                margin-left: auto;
+                display: block;
+            }
+
+        }
+
+        &.porters {
+            margin-bottom: 0 !important;
+        }
+
+    }
+
+    .form-tabs,
+    .form-tabs__tab {
+        width: 100%;
+    }
+
+    .row.docs {
+        display: flex;
+
+        .attach-files,
+        .attach-images {
+            margin-top: 0 !important;
+            width: calc(50% - 12.5px);
+
+        }
+
+    }
+
+    fieldset {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        border: none !important;
+    }
+
     form {
         max-width: 650px;
         display: flex;
         flex-wrap: wrap;
+
+        .add-option.add-trailer {
+            margin-bottom: 32px;
+        }
+
+        .divider {
+            border-top: 1px dashed #D4D4D4;
+            display: block;
+            width: 100%;
+            margin: 25px 0;
+        }
+
+        .fields-title {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+            margin-bottom: 24px;
+        }
 
         div.add-option {
             display: flex;
@@ -107,10 +307,13 @@ section.register-transporter {
             line-height: 17px;
             color: #000000;
             width: 100%;
-            margin-bottom: 30px;
-            cursor: pointer;
             align-items: center;
             user-select: none;
+            margin: 17px 0 10px;
+
+            span.ic {
+                cursor: pointer;
+            }
 
             .hidden-text {
                 display: none;
@@ -118,11 +321,29 @@ section.register-transporter {
 
             p {
                 margin-left: 12px;
+                cursor: auto;
             }
         }
 
         .fields {
             width: 100%;
+        }
+
+        .fields-item__box {
+            display: flex;
+            align-items: center;
+            border: 1px solid #00982f;
+
+            span {
+                color: #D8D8D8;
+            }
+
+            input {
+                width: 30% !important;
+                border: 0 !important;
+                text-align: center;
+            }
+
         }
 
         .row {
@@ -135,8 +356,12 @@ section.register-transporter {
             width: calc(50% - 12.5px);
             margin-bottom: 20px;
 
+            &.fullwidth {
+                width: 100% !important;
+            }
+
             input {
-                height: 50px;
+                height: 50px !important;
             }
         }
 
@@ -204,6 +429,31 @@ section.register-transporter {
 
     section.register .content-right {
         margin-right: 0;
+    }
+
+}
+
+@media screen and (max-width: 1060px) {
+
+    .register-form .tooltip {
+        position: relative;
+        transform: none;
+        width: 100%;
+        margin-top: 10px;
+        padding-left: 25px;
+        left: 0;
+        top: 0;
+
+        span.ic {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        br {
+            display: none;
+        }
+
     }
 
 }
@@ -281,6 +531,11 @@ section.register-transporter {
 
 @media screen and (max-width: 550px) {
 
+    .register-form .row.docs .attach-files,
+    .register-form .row.docs .attach-images {
+        width: 100% !important;
+    }
+
     .register-form form .attach-files,
     .register-form form .attach-images {
         width: 100% !important;
@@ -319,6 +574,21 @@ section.register-transporter {
 
 
 @media screen and (max-width: 375px) {
+
+    .typeof-entity__select,
+    .typeof-staff__select {
+        padding: 0 10px 0 20px;
+    }
+
+    .typeof-entity__select .title,
+    .typeof-staff__select .title {
+        font-size: 11px;
+    }
+
+    .typeof-entity__select .value,
+    .typeof-staff__select .value {
+        font-size: 14px;
+    }
 
     .register-form .agreement-text {
         br {

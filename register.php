@@ -39,13 +39,9 @@
                                     <span class="ic individual"></span>
                                     <p>Физическое лицо</p>
                                 </a>
-                                <a href="/register-entity.php" class="item">
+                                <a href="/register-2.php" class="item">
                                     <span class="ic entity"></span>
                                     <p>Юридическое лицо</p>
-                                </a>
-                                <a href="/register-transporter.php" class="item">
-                                    <span class="ic transporter"></span>
-                                    <p>Грузоперевозчик</p>
                                 </a>
                             </div>
                         </div>

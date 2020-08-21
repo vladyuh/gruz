@@ -60,6 +60,10 @@
         display: flex;
         align-items: baseline;
 
+        label.control-label::after {
+            background: #F8F8F8 !important;
+        }
+
         .fields-item {
             position: relative;
             margin-bottom: 10px;
@@ -95,7 +99,7 @@
             line-height: 17px;
             color: #000;
             padding-left: 35px;
-            height: 50px;
+            height: 50px !important;
         }
 
         input::placeholder {
@@ -120,6 +124,10 @@
 .services-form {
     background: #fff;
     padding: 33px 0 47px;
+
+    label.control-label::after {
+        background: #fff !important;
+    }
 
     .block-desc {
         text-align: center;
@@ -490,26 +498,47 @@ section.movement {
 @media screen and (max-width: 480px) {
 
     .services-form {
-        padding: 0 !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 4;
+        padding: 0;
+        background: #fff;
+        transition: all 0.5s cubic-bezier(0, 1, 0.5, 1);
 
-        .block-subheading,
+        .block-desc,
+        .services-form__content {
+            display: none;
+        }
+
+        &.active {
+            overflow-y: scroll;
+            top: 0;
+            z-index: 7;
+            height: calc(100vh);
+            padding-bottom: 70px;
+
+            .block-desc,
+            .services-form__content {
+                display: block;
+            }
+        }
+
+        .wrapper {
+            padding: 0 !important;
+        }
+
+        .block-heading,
+        form,
         .block-desc {
-            display: none;
+            padding: 0 25px;
         }
 
-        form {
+        .block-heading,
+        .block-subheading {
             display: none;
-
         }
-
-
-    }
-
-    .services-form__content.fancybox-content {
-        margin-top: 0;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        width: 100%;
     }
 
 

@@ -99,6 +99,29 @@
 .calculate {
     padding: 56px 0 58px;
     background: #fff;
+    position: relative;
+
+    #calculator-form.no-pointer {
+        pointer-events: none;
+    }
+
+    .errors-block {
+        display: block;
+    }
+
+    .errors,
+    .errors2 {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        p {
+            margin-right: 5px;
+            font-size: 13px;
+            color: red;
+        }
+    }
 
     .block-heading {
         display: none;
@@ -186,6 +209,19 @@
             pointer-events: none;
         }
 
+        .dimensions-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #d5d5d5;
+
+            input {
+                width: calc(100% / 3 - 20px);
+                text-align: center;
+                border: none;
+            }
+        }
+
         div.add-option {
             p {
                 margin-left: 12px;
@@ -213,7 +249,7 @@
             margin-left: 10px;
         }
 
-        .submit button {
+        .submit>div {
             margin-top: 30px;
             width: 100%;
         }
@@ -481,6 +517,7 @@
     .calculate .block-heading {
         display: block;
         padding-bottom: 40px;
+        text-align: center;
     }
 
     .calculate-form .column {
@@ -543,18 +580,53 @@
 @media screen and (max-width: 480px) {
 
     .calculate {
-        padding: 0 !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 4;
+        padding: 0;
+        background: #fff;
+        transition: all 0.5s cubic-bezier(0, 1, 0.5, 1);
+
+        .calculate-form {
+            display: none;
+        }
+
+        .errors2,
+        .errors {
+            margin-top: 0px;
+            padding: 0 25px;
+
+            p {
+                line-height: 40px;
+            }
+        }
+
+        &.active {
+            overflow-y: scroll;
+            top: 0;
+            z-index: 7;
+            height: calc(100vh);
+            padding-bottom: 90px;
+
+            .calculate-form {
+                display: block;
+            }
+        }
+
+        .wrapper {
+            padding: 0 !important;
+        }
+
+        .block-heading,
+        form {
+            padding: 0 25px;
+        }
 
         .block-heading {
             display: none;
         }
-
-        .calculate-form {
-            display: none;
-
-        }
-
-
     }
 
     .fancybox-content.calculate-form {
@@ -576,10 +648,6 @@
     .main-banner .rent {
         position: relative;
         max-width: none;
-    }
-
-    .calculate {
-        padding: 40px 0;
     }
 
     .block-heading {
