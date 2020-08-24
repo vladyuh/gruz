@@ -22,6 +22,15 @@ body {
   margin-top: 5px;
 }
 
+.has-error{
+  .help-block{
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+  }
+}
+
+
 .calculate-toggle {
   display: none;
 }
