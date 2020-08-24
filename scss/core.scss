@@ -1157,8 +1157,7 @@ a.back-btn {
   .fields.files {
     display: flex;
 
-    .attach-files,
-    .attach-images {
+    .form-group {
       flex-direction: row;
       display: flex;
       align-items: center;
