@@ -22,8 +22,8 @@ body {
   margin-top: 5px;
 }
 
-.has-error{
-  .help-block{
+.has-error {
+  .help-block {
     color: red;
     font-size: 13px;
     margin-top: 5px;
@@ -1090,10 +1090,11 @@ a.back-btn {
   }
 }
 
-.fancybox-stage{
+.fancybox-stage {
+
   .popup-adddriver,
   .popup-addautos,
-  .popup.wide{
+  .popup.wide {
     max-width: 718px;
   }
 }
@@ -1188,6 +1189,114 @@ a.back-btn {
 //основные стили для форм
 
 form {
+
+  .estimate__action-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .estimate__attach-bar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .estimate__attach-bar ul li {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    width: 100%;
+  }
+
+  .estimate__attach-bar ul li .image-attach {
+    background: #fff;
+    display: block;
+    position: relative;
+    outline: 2px solid #cc9590;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 66px;
+  }
+
+  .image-attach label {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .image-attach label input {
+    display: none;
+  }
+
+  .image-attach label img {
+    max-width: 40%;
+  }
+
+  .remove-attach {
+    position: absolute;
+    top: -13px;
+    right: -12px;
+    background: #eee;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+    font-size: 28px;
+    transform: rotate(45deg);
+    cursor: pointer;
+  }
+
+  .remove-attach:hover {
+    background: #ccc;
+  }
+
+  .image-attach.load::before {
+    content: 'Загрузка';
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
   input.search {
     background-image: url(/img/icons/svg/ic_search.svg) !important;
     background-repeat: no-repeat !important;

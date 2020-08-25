@@ -101,6 +101,11 @@
                                         <span>Статус</span>
                                     </div>
                                 </div>
+                                <div class="table__cell">
+                                    <div class="table__cell-content">
+                                        способ оплаты
+                                    </div>
+                                </div>
                                 <div class="table__cell sortable">
                                     <div class="table__cell-content">
                                         <span>сумма заказа</span>
@@ -109,23 +114,25 @@
                                 </div>
                             </div>
                             <div class="table__row">
-                                <div class="table__cell number" data-title="#"><a href="">645 767 346</a></div>
+                                <div class="table__cell number" data-title="#"><a href="/company-personal-order.php">645 767 346</a></div>
                                 <div class="table__cell from" data-title="Откуда"> г.Минск, ул. Ленина, д. 43</div>
                                 <div class="table__cell to" data-title="Куда">д. Зайцево, пер. Майский, д. 32</div>
                                 <div class="table__cell creation-date" data-title="Дата загрузки">11.03.20</div>
                                 <div class="table__cell auto" data-title="Автомобиль">Mercedes-Benz <br>4658 АХ-3</div>
                                 <div class="table__cell driver" data-title="Водитель">Иванов Петр <br>+375 (29) 482-25-25</div>
                                 <div class="table__cell status" data-title=""><span class="in-progress">В пути <br>к заказчику</span></div>
+                                <div class="table__cell payment" data-title="Cпособ оплаты">Наличными</div>
                                 <div class="table__cell cost" data-title="Сумма заказа">3846</div>
                             </div>
                             <div class="table__row">
-                                <div class="table__cell number" data-title="#"><a href="">645 767 346</a></div>
+                                <div class="table__cell number" data-title="#"><a href="/company-personal-order.php">645 767 346</a></div>
                                 <div class="table__cell from" data-title="Откуда"> г.Минск, ул. Ленина, д. 43</div>
                                 <div class="table__cell to" data-title="Куда">д. Зайцево, пер. Майский, д. 32</div>
                                 <div class="table__cell creation-date" data-title="Дата загрузки">11.03.20</div>
                                 <div class="table__cell auto" data-title="Автомобиль">Hyundai 3267 АХ-6 <br><strong class="trailer">Прицеп:</strong> 24647</div>
                                 <div class="table__cell driver" data-title="Водитель">Семенов Виктор <br>+375 (29) 482-25-25</div>
                                 <div class="table__cell status" data-title=""><span class="in-progress">Заказ <br>выполнен</span></div>
+                                <div class="table__cell payment" data-title="Cпособ оплаты">ЕРИП</div>
                                 <div class="table__cell cost" data-title="Сумма заказа">3846</div>
                             </div>
                         </div>
