@@ -144,6 +144,15 @@
                                         <span class="ic plus"></span>
                                     </div>
                                 </div>
+                                <div class="fields-item fastAsCan">
+                                    <label class="switch">
+                                        <input type="checkbox" name="fastAsCan" value="Да">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <div class="movers-text">
+                                        Как можно быстрее
+                                    </div>
+                                </div>
                                 <div class="fields-item movers">
                                     <label class="switch">
                                         <input type="checkbox" name="movers" value="Да" checked>
@@ -184,11 +193,11 @@
                                     <label>Телефон</label>
                                     <input type="tel" name="phone">
                                 </div>
-                                <div class="fields-item select">
+                                <div class="fields-item payment">
                                     <label>Cпособ оплаты</label>
-                                    <select name="car-model" id=""> 
-                                        <option value="Наличными">Наличными</option>
-                                        <option value="Картой">Картой</option>
+                                    <select name="payment" id=""> 
+                                        <option value="cash">Наличными</option>
+                                        <option value="bill">Оплата по счету</option>
                                     </select>
                                 </div>
                                 <div class="fields-item prim optional">

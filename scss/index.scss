@@ -158,6 +158,12 @@
             display: flex;
         }
 
+        .fields-item.fastAsCan {
+            display: flex;
+            align-items: center;
+            min-height: 40px;
+        }
+
         .fields-item.movers,
         .fields-item.seats {
             align-items: center;

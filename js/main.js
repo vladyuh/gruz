@@ -45,8 +45,7 @@ $(document).ready(function () {
     arrows: false,
     dots: true,
     appendDots: $(".autopark .slider-nav .dots"),
-    responsive: [
-      {
+    responsive: [{
         breakpoint: 1111,
         settings: {
           slidesToShow: 3,
@@ -98,8 +97,7 @@ $(document).ready(function () {
 
   $(".ic.minus").on("click", function () {
     var old = $(this).parents(".input-box").find('input[type="number"]').val();
-    if (old == 0) {
-    } else {
+    if (old == 0) {} else {
       $(this)
         .parents(".input-box")
         .find('input[type="number"]')
@@ -147,6 +145,22 @@ $(document).ready(function () {
 
   $('.fields-item.seats input[type="checkbox"]').change(function () {
     $(".fields-item.p-count").toggleClass("disabled");
+  });
+
+
+  //При выборе "Как можно быстрее"
+
+  $('#calc .fastAsCan input:checkbox').on("change", function () {});
+
+  //При выборе оплата по счету убирать "Как можно быстрее"
+
+  $('#calc select[name="payment"]').on("change", function () {
+    if ($(this).val() == "bill") {
+      $('#calc .fastAsCan').find('input:checkbox').prop("checked", false);
+      $('#calc .fastAsCan').find('input:checkbox').prop("disabled", true);
+    } else {
+      $('#calc .fastAsCan').find('input:checkbox').prop("disabled", false);
+    }
   });
 
   //Активация полей "Пассажиры" на "Услуги"
@@ -297,8 +311,7 @@ $(document).ready(function () {
 
       if (Math.abs(lastScrollTop - st) <= delta) return;
 
-      if ($(".header-content__m--menu").hasClass("open")) {
-      } else {
+      if ($(".header-content__m--menu").hasClass("open")) {} else {
         if (st > lastScrollTop && st > navbarHeight) {
           $("header").removeClass("nav-down").addClass("nav-up");
         } else {
@@ -497,8 +510,7 @@ $(document).ready(function () {
       });
 
       // Создание экземпляра маршрута.
-      multiRoute = new ymaps.multiRouter.MultiRoute(
-        {
+      multiRoute = new ymaps.multiRouter.MultiRoute({
           // Точки маршрута.
           // Обязательное поле.
           referencePoints: referencePoints,
@@ -564,8 +576,7 @@ $(document).ready(function () {
       showThumbs: true,
       addMore: true,
       allowDuplicates: false,
-      changeInput:
-        '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic files"></span> <span class="caption">Загрузить документ</span></div></div></div>',
+      changeInput: '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic files"></span> <span class="caption">Загрузить документ</span></div></div></div>',
     });
   }
 
@@ -574,8 +585,7 @@ $(document).ready(function () {
       showThumbs: true,
       addMore: true,
       allowDuplicates: false,
-      changeInput:
-        '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic images"></span> <span class="caption">Загрузить фото авто</span></div></div></div>',
+      changeInput: '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic images"></span> <span class="caption">Загрузить фото авто</span></div></div></div>',
     });
   }
 
@@ -584,8 +594,7 @@ $(document).ready(function () {
       showThumbs: true,
       addMore: true,
       allowDuplicates: false,
-      changeInput:
-        '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic images"></span> <span class="caption">Загрузить фото водительского удостоверения</span></div></div></div>',
+      changeInput: '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic images"></span> <span class="caption">Загрузить фото водительского удостоверения</span></div></div></div>',
     });
   }
 
@@ -594,8 +603,7 @@ $(document).ready(function () {
       showThumbs: true,
       addMore: true,
       allowDuplicates: false,
-      changeInput:
-        '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic files"></span> <span class="caption">Загрузить документ</span></div></div></div>',
+      changeInput: '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic files"></span> <span class="caption">Загрузить документ</span></div></div></div>',
     });
   }
 
