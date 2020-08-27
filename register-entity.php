@@ -122,10 +122,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="attach-files drop-area">
-                                <input type="file" name="files" id="" multiple>
-                                <span class="ic files"></span>
-                                <label for="files">Загрузить документ</label>
+                            <div class="fields-item fullwidth attachDocuments docs">
+                                <input type="file" name="companyFiles" id="companyFiles" multiple
+                                    accept=".xlsx,.xls,.doc,.docx,.txt,.pdf">
                             </div>
                             <div class="divider"></div>
                         </fieldset>

@@ -170,12 +170,7 @@
                                     Документы
                                 </div>
                             </div>
-                            <div class="profile-customer__block-content">
-                                <form class="attach-files drop-area">
-                                    <input type="file" name="files" multiple>
-                                    <span class="ic files"></span>
-                                    <label for="files">Загрузить документ</label>                                    
-                                </form>
+                            <div class="profile-customer__block-content">                                
                                 <div class="document-items">
                                     <a href="#" download class="item">
                                         <strong class="item-extension">PDF</strong>
@@ -205,8 +200,17 @@
                                             перевозках грузов.pdf
                                             <span>(236 Кб)</span>
                                         </p>
-                                    </a>                                    
+                                    </a>
                                 </div>
+                                <form>
+                                    <div class="fields-item fullwidth attachDocuments personal">
+                                        <input type="file" name="companyFiles2" id="companyFiles2" multiple
+                                            accept=".xlsx,.xls,.doc,.docx,.txt,.pdf">
+                                    </div>
+                                    <div class="submit">
+                                        <button type="submit" class="flat-btn yellow">Сохранить</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -228,12 +232,13 @@
                                             <img src="/img/profile/driver-1.svg" alt="">
                                             <div class="item-status green"></div>
                                         </div>
-                                        <div class="item-name">Иванов Семен</div>
+                                        <a href="#driverInfo" data-fancybox class="item-name">Иванов Семен</a>
                                         <a href="tel:+375294953434" class="item-number">
                                             <span class="ic phone"></span>
                                             <p>+375 (29) 495-34-34</p>
                                         </a>
-                                        <a href="#edit-driver" data-fancybox class="item-edit"><span class="ic edit"></span></a>
+                                        <a href="#edit-driver" data-fancybox class="item-edit"><span
+                                                class="ic edit"></span></a>
                                         <a href="#" class="item-remove"><span class="ic delete"></span></a>
                                     </div>
                                     <div class="item">
@@ -246,7 +251,8 @@
                                             <span class="ic phone"></span>
                                             <p>+375 (29) 495-34-34</p>
                                         </a>
-                                        <a href="#edit-driver" data-fancybox class="item-edit"><span class="ic edit"></span></a>
+                                        <a href="#edit-driver" data-fancybox class="item-edit"><span
+                                                class="ic edit"></span></a>
                                         <a href="#" class="item-remove"><span class="ic delete"></span></a>
                                     </div>
                                     <div class="item">
@@ -258,7 +264,8 @@
                                             <span class="ic phone"></span>
                                             <p>+375 (29) 495-34-34</p>
                                         </a>
-                                        <a href="#edit-driver" data-fancybox class="item-edit"><span class="ic edit"></span></a>
+                                        <a href="#edit-driver" data-fancybox class="item-edit"><span
+                                                class="ic edit"></span></a>
                                         <a href="#" class="item-remove"><span class="ic delete"></span></a>
                                     </div>
                                 </div>
@@ -281,10 +288,10 @@
                                             <img src="/img/profile/auto.svg" alt="">
                                             <div class="item-status green"></div>
                                         </div>
-                                        <div class="item-name">Mercedes-Benz</div>
+                                        <a href="#carInfo" data-fancybox class="item-name">Mercedes-Benz</a>
                                         <div class="item-number">4658 АХ-3</div>
-                                        <a href="#add-documents" data-fancybox class="item-docs"><span class="ic document"></a>
-                                        <a href="#edit-car" data-fancybox class="item-edit"><span class="ic edit"></span></a>
+                                        <a href="#edit-car" data-fancybox class="item-edit"><span
+                                                class="ic edit"></span></a>
                                         <a href="#" class="item-remove"><span class="ic delete"></span></a>
                                     </div>
                                     <div class="item">
@@ -294,8 +301,8 @@
                                         </div>
                                         <div class="item-name">Mercedes-Benz</div>
                                         <div class="item-number">4658 АХ-3</div>
-                                        <a href="#add-documents" data-fancybox class="item-docs"><span class="ic document"></a>
-                                        <a href="#edit-car" data-fancybox class="item-edit"><span class="ic edit"></span></a>
+                                        <a href="#edit-car" data-fancybox class="item-edit"><span
+                                                class="ic edit"></span></a>
                                         <a href="#" class="item-remove"><span class="ic delete"></span></a>
                                     </div>
                                     <div class="item">
@@ -304,8 +311,8 @@
                                         </div>
                                         <div class="item-name">Mercedes-Benz</div>
                                         <div class="item-number">4658 АХ-3</div>
-                                        <a href="#add-documents" data-fancybox class="item-docs"><span class="ic document"></a>
-                                        <a href="#edit-car" data-fancybox class="item-edit"><span class="ic edit"></span></a>
+                                        <a href="#edit-car" data-fancybox class="item-edit"><span
+                                                class="ic edit"></span></a>
                                         <a href="#" class="item-remove"><span class="ic delete"></span></a>
                                     </div>
                                 </div>

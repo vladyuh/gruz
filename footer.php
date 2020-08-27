@@ -151,10 +151,9 @@
     <div class="popup-title">Отправить договор</div>
     <form action="">
         <div class="fields">
-            <div class="attach-files drop-area">
-                <input type="file" name="contract" id="contract" multiple="">
-                <span class="ic files"></span>
-                <label for="files">Загрузить документ</label>
+            <div class="fields-item fullwidth attachDocuments personal">
+                <input type="file" name="companyFiles3" id="companyFiles3" multiple
+                    accept=".xlsx,.xls,.doc,.docx,.txt,.pdf">
             </div>
         </div>
         <div class="submit">
@@ -180,10 +179,9 @@
                 <label for="">Паспорт (Серия номер, кем и дата выдачи)</label>
                 <input type="text" name="" id="">
             </div>
-            <div class="attach-images drop-area">
-                <input type="file" name="images" multiple="" accept="image/png, image/jpeg">
-                <span class="ic images"></span>
-                <label for="files">Загрузить фото водительского удостоверения</label>
+            <div class="fields-item fullwidth attachDocuments driver">
+                <input type="file" name="driverFiles2" id="driverFiles2" multiple
+                    accept="image/png, image/jpeg, image/jpg">
             </div>
         </div>
         <div class="submit">
@@ -290,15 +288,12 @@
 
         </div>
         <div class="fields files">
-            <div class="attach-images drop-area">
-                <input type="file" name="images" multiple="" accept="image/png, image/jpeg">
-                <span class="ic images"></span>
-                <label for="files">Загрузить фото авто</label>
+            <div class="fields-item attachDocuments photos">
+                <input type="file" name="autoPhotos2" id="autoPhotos2" multiple
+                    accept="image/png, image/jpeg, image/jpg">
             </div>
-            <div class="attach-files drop-area">
-                <input type="file" name="files" multiple="">
-                <span class="ic files"></span>
-                <label for="files">Загрузить документ</label>
+            <div class="fields-item attachDocuments docs">
+                <input type="file" name="autoDocs2" id="autoDocs2" multiple accept=".xlsx,.xls,.doc,.docx,.txt,.pdf">
             </div>
         </div>
         <div class="submit">
@@ -328,36 +323,6 @@
         </div>
     </form>
 </div>
-
-<!-- <div id="order-accept-1" class="popup popup-order" style="display:none">
-    <div class="popup-title">Заказ на перевозку успешно создан!</div>
-    <div class="popup-desc">
-        <p>За час до подачи автомобиля вам придет sms-сообщение с информацией о водителе.</p>
-        <br>
-        <p>Для уточнения деталей можете обращаться по номеру телефона: <a href="">+ 375 29 000 00 00</a></p>
-    </div>
-    <form action="">
-        <div class="fields">
-            <div class="enterCode">
-                <span class="ic code"></span>
-                <div class="enterCode-input">
-                    <label for="">Введите смс код</label>
-                    <input type="text" name="СМС-код" value="320975">
-                </div>
-            </div>
-        </div>
-        <div class="register-checkbox">
-            <label class="switch">
-                <input type="checkbox" name="register" checked="checked" value="Зарегистрировать по номеру телефона">
-                <span class="slider round"></span>
-            </label>
-            <div class="text">Зарегистрировать в ЛК по номеру телефона для <br>отслеживания заказа</div>
-        </div>
-        <div class="submit">
-            <button type="submit" class="flat-btn yellow">Продолжить</button>
-        </div>
-    </form>
-</div> -->
 
 <div id="order-success" class="popup popup-order" style="display:none">
     <div class="popup-title">Спасибо, ваш заказ успешно создан!</div>
@@ -408,10 +373,23 @@
                 <label for="">Паспорт (Серия номер, кем и дата выдачи)</label>
                 <input type="text" name="" id="" value="КВ 3581437 Октябрьским РОВД 03.08.2014">
             </div>
-            <div class="attach-images drop-area">
-                <input type="file" name="images" multiple="" accept="image/png, image/jpeg">
-                <span class="ic images"></span>
-                <label for="files">Загрузить фото водительского удостоверения</label>
+            <div class="fields-item fullwidth attachDocuments driver">
+                <input type="file" name="driverFiles3" id="driverFiles3" multiple
+                    accept="image/png, image/jpeg, image/jpg">
+            </div>
+        </div>
+        <div class="uploadedImages">
+            <div class="uploadedImages-image">
+                <img src="/img/uploadedPhotos/driver-1.jpg" alt="">
+                <a href="#">
+                    <span class="ic basket"></span>
+                </a>
+            </div>
+            <div class="uploadedImages-image">
+                <img src="/img/uploadedPhotos/driver-2.jpg" alt="">
+                <a href="#">
+                    <span class="ic basket"></span>
+                </a>
             </div>
         </div>
         <div class="submit">
@@ -518,16 +496,49 @@
 
         </div>
         <div class="fields files">
-            <div class="attach-images drop-area">
-                <input type="file" name="images" multiple="" accept="image/png, image/jpeg">
-                <span class="ic images"></span>
-                <label for="files">Загрузить фото авто</label>
+            <div class="fields-item attachDocuments photos">
+                <input type="file" name="autoPhotos3" id="autoPhotos3" multiple
+                    accept="image/png, image/jpeg, image/jpg">
             </div>
-            <div class="attach-files drop-area">
-                <input type="file" name="files" multiple="">
-                <span class="ic files"></span>
-                <label for="files">Загрузить документ</label>
+            <div class="fields-item attachDocuments docs">
+                <input type="file" name="autoDocs3" id="autoDocs3" multiple accept=".xlsx,.xls,.doc,.docx,.txt,.pdf">
             </div>
+        </div>
+        <div class="uploadedImages">
+            <div class="uploadedImages-image">
+                <img src="/img/uploadedPhotos/car-1.png" alt="">
+                <a href="#">
+                    <span class="ic basket"></span>
+                </a>
+            </div>
+            <div class="uploadedImages-image">
+                <img src="/img/uploadedPhotos/car-2.png" alt="">
+                <a href="#">
+                    <span class="ic basket"></span>
+                </a>
+            </div>
+            <div class="uploadedImages-image">
+                <img src="/img/uploadedPhotos/car-3.png" alt="">
+                <a href="#">
+                    <span class="ic basket"></span>
+                </a>
+            </div>
+        </div>
+        <div class="document-items">
+            <a href="#" download="" class="item">
+                <strong class="item-extension">PDF</strong>
+                <p class="item-filename">
+                    Договор автомобильной перевозки груза.pdf
+                    <span>(236 Кб)</span>
+                </p>
+            </a>
+            <a href="#" download="" class="item">
+                <strong class="item-extension">PDF</strong>
+                <p class="item-filename">
+                    Договор автомобильной перевозки груза.pdf
+                    <span>(236 Кб)</span>
+                </p>
+            </a>
         </div>
         <div class="submit">
             <button class="flat-btn yellow">Сохранить</button>
@@ -567,6 +578,133 @@
     </div>
 </div>
 
+<div id="driverInfo" class="popup wide info" style="display:none">
+    <div class="popup-title">Водитель</div>
+    <div class="popup-body">
+        <div class="info-item">
+            <div class="info-item__title">ФИО</div>
+            <div class="info-item__value">Иванов Семен</div>
+        </div>
+        <div class="info-item">
+            <div class="info-item__title">телефон</div>
+            <div class="info-item__value">+375 (29) 495-34-34</div>
+        </div>
+        <div class="info-item fullwidth">
+            <div class="info-item__title">Паспорт (Серия номер, кем и дата выдачи)</div>
+            <div class="info-item__value">КВ 3581437 Октябрьским РОВД 03.08.2014</div>
+        </div>
+        <div class="uploadedImages">
+            <a href="/img/uploadedPhotos/driver-1.jpg" data-fancybox="gallery1" class="uploadedImages-image">
+                <img src="/img/uploadedPhotos/driver-1.jpg" alt="">
+            </a>
+            <a href="/img/uploadedPhotos/driver-2.jpg" data-fancybox="gallery1" class="uploadedImages-image">
+                <img src="/img/uploadedPhotos/driver-2.jpg" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="popup-close">
+        <a href="javascript:$.fancybox.close()" class="flat-btn yellow">Закрыть</a>
+    </div>
+</div>
+
+<div id="carInfo" class="popup wide info" style="display:none">
+    <div class="popup-title">Автомобиль</div>
+    <div class="popup-body">
+        <div class="info-item">
+            <div class="info-item__title">НОМЕР МАШИНЫ</div>
+            <div class="info-item__value">4658 AX-3</div>
+        </div>
+        <div class="info-item">
+            <div class="info-item__title">МАРКА</div>
+            <div class="info-item__value">Mercedes</div>
+        </div>
+        <div class="info-item">
+            <div class="info-item__title">МОДЕЛЬ</div>
+            <div class="info-item__value">Benz</div>
+        </div>
+        <div class="info-item">
+            <div class="info-item__title">ГОД ВЫПУСКА</div>
+            <div class="info-item__value">2010</div>
+        </div>
+        <div class="info-item">
+            <div class="info-item__title">ПАЛЛЕТЫ</div>
+            <div class="info-item__value">2</div>
+        </div>
+        <div class="info-item">
+            <div class="info-item__title">ГАБАРИТЫ ОСНОВНОГО ОТСЕКА (М)</div>
+            <div class="info-item__value">2 x 2 x 2</div>
+        </div>
+        <div class="info-item">
+            <div class="info-item__title">ГРУЗОПОДЪЕМНОСТЬ (Т)</div>
+            <div class="info-item__value">3</div>
+        </div>
+        <div class="info-item">
+            <div class="info-item__title">НОМЕР ПРИЦЕПА</div>
+            <div class="info-item__value"></div>
+        </div>
+        <div class="info-item">
+            <div class="info-item__title">ПАЛЛЕТЫ</div>
+            <div class="info-item__value">2</div>
+        </div>
+        <div class="info-item">
+            <div class="info-item__title">ГАБАРИТЫ ОСНОВНОГО ОТСЕКА (М)</div>
+            <div class="info-item__value">2 x 2 x 2</div>
+        </div>
+        <div class="info-item">
+            <div class="info-item__title">ГРУЗОПОДЪЕМНОСТЬ (Т)</div>
+            <div class="info-item__value">3</div>
+        </div>
+        <div class="uploadedImages">
+            <a data-fancybox="gallery" href="/img/car-image-1b.png" class="uploadedImages-image">
+                <img src="/img/uploadedPhotos/car-1.png" alt="">
+            </a>
+            <a data-fancybox="gallery" href="/img/car-image-2b.png" class="uploadedImages-image">
+                <img src="/img/uploadedPhotos/car-2.png" alt="">
+            </a>
+        </div>
+        <div class="document-items">
+            <a href="#" download="" class="item">
+                <strong class="item-extension">PDF</strong>
+                <p class="item-filename">
+                    Договор автомобильной перевозки груза.pdf
+                    <span>(236 Кб)</span>
+                </p>
+            </a>
+            <a href="#" download="" class="item">
+                <strong class="item-extension">PDF</strong>
+                <p class="item-filename">
+                    Договор автомобильной перевозки груза.pdf
+                    <span>(236 Кб)</span>
+                </p>
+            </a>
+        </div>
+    </div>
+    <div class="popup-close">
+        <a href="javascript:$.fancybox.close()" class="flat-btn yellow">Закрыть</a>
+    </div>
+</div>
+
+<div id="moverInfo" class="popup wide info" style="display:none">
+    <div class="popup-title">Грузчик</div>
+    <div class="popup-body">
+        <div class="info-item">
+            <div class="info-item__title">ФИО</div>
+            <div class="info-item__value">Иванов Семен</div>
+        </div>
+        <div class="info-item">
+            <div class="info-item__title">телефон</div>
+            <div class="info-item__value">+375 (29) 495-34-34</div>
+        </div>
+        <div class="info-item fullwidth">
+            <div class="info-item__title">Паспорт (Серия номер, кем и дата выдачи)</div>
+            <div class="info-item__value">КВ 3581437 Октябрьским РОВД 03.08.2014</div>
+        </div>
+    </div>
+    <div class="popup-close">
+        <a href="javascript:$.fancybox.close()" class="flat-btn yellow">Закрыть</a>
+    </div>
+</div>
+
 
 
 
@@ -584,7 +722,11 @@
 
 <script src="../tooltipster/dist/js/tooltipster.bundle.min.js"></script>
 
+<script src="/jfiler/js/jquery.filer.min.js" type="text/javascript"></script>
+
 <script src="/js/main.js"></script>
+
+<script src="/js/register.js"></script>
 
 <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate"></script>
 

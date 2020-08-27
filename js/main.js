@@ -45,7 +45,8 @@ $(document).ready(function () {
     arrows: false,
     dots: true,
     appendDots: $(".autopark .slider-nav .dots"),
-    responsive: [{
+    responsive: [
+      {
         breakpoint: 1111,
         settings: {
           slidesToShow: 3,
@@ -97,7 +98,8 @@ $(document).ready(function () {
 
   $(".ic.minus").on("click", function () {
     var old = $(this).parents(".input-box").find('input[type="number"]').val();
-    if (old == 0) {} else {
+    if (old == 0) {
+    } else {
       $(this)
         .parents(".input-box")
         .find('input[type="number"]')
@@ -295,7 +297,8 @@ $(document).ready(function () {
 
       if (Math.abs(lastScrollTop - st) <= delta) return;
 
-      if ($(".header-content__m--menu").hasClass("open")) {} else {
+      if ($(".header-content__m--menu").hasClass("open")) {
+      } else {
         if (st > lastScrollTop && st > navbarHeight) {
           $("header").removeClass("nav-down").addClass("nav-up");
         } else {
@@ -494,7 +497,8 @@ $(document).ready(function () {
       });
 
       // Создание экземпляра маршрута.
-      multiRoute = new ymaps.multiRouter.MultiRoute({
+      multiRoute = new ymaps.multiRouter.MultiRoute(
+        {
           // Точки маршрута.
           // Обязательное поле.
           referencePoints: referencePoints,
@@ -553,21 +557,65 @@ $(document).ready(function () {
     }
   }
 
+  //инициализация инпутов с файлами
+
+  function docsFiler(elem) {
+    elem.filer({
+      showThumbs: true,
+      addMore: true,
+      allowDuplicates: false,
+      changeInput:
+        '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic files"></span> <span class="caption">Загрузить документ</span></div></div></div>',
+    });
+  }
+
+  function photosFiler(elem) {
+    elem.filer({
+      showThumbs: true,
+      addMore: true,
+      allowDuplicates: false,
+      changeInput:
+        '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic images"></span> <span class="caption">Загрузить фото авто</span></div></div></div>',
+    });
+  }
+
+  function driverFiler(elem) {
+    elem.filer({
+      showThumbs: true,
+      addMore: true,
+      allowDuplicates: false,
+      changeInput:
+        '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic images"></span> <span class="caption">Загрузить фото водительского удостоверения</span></div></div></div>',
+    });
+  }
+
+  function personalFiler(elem) {
+    elem.filer({
+      showThumbs: true,
+      addMore: true,
+      allowDuplicates: false,
+      changeInput:
+        '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic files"></span> <span class="caption">Загрузить документ</span></div></div></div>',
+    });
+  }
+
   //добавления водителей
+
+  var driverParent = $(".register-form fieldset#drivers .fields");
+  var driverFields = driverParent.find(".row.drivers").eq(0).clone();
+  driverFields.find("input,textarea").val("");
+  driverFields.prepend(
+    '<div class="remove"><span class="ic delete"></span></div>'
+  );
 
   $(".register-form").on(
     "click",
     ".add-drivers span.ic.add-option",
     function () {
-      var parent = $(".register-form fieldset#drivers .fields");
-      var driverFields = parent.find(".row.drivers").eq(0).clone();
-      driverFields.find("input,textarea").val("");
-      driverFields.prepend(
-        '<div class="remove"><span class="ic delete"></span></div>'
-      );
-      parent.append(driverFields);
-
+      var driverFields1 = driverFields.clone();
+      driverParent.append(driverFields1);
       initPhonemask();
+      driverFiler($(".row.drivers:last .attachDocuments.driver input:file"));
     }
   );
 
@@ -577,22 +625,23 @@ $(document).ready(function () {
 
   //добавления грузчиков
 
+  var porterParent = $(".register-form fieldset#porters .fields");
+  var porterFields = porterParent
+    .parents("fieldset#porters")
+    .find(".row.porters")
+    .eq(0)
+    .clone();
+  porterFields.find("input,textarea").val("");
+  porterFields.prepend(
+    '<div class="remove"><span class="ic delete"></span></div>'
+  );
+
   $(".register-form").on(
     "click",
     ".add-porters span.ic.add-option",
     function () {
-      var parent = $(".register-form fieldset#porters .fields");
-      var porterFields = parent
-        .parents("fieldset#porters")
-        .find(".row.porters")
-        .eq(0)
-        .clone();
-      porterFields.find("input,textarea").val("");
-      porterFields.prepend(
-        '<div class="remove"><span class="ic delete"></span></div>'
-      );
-      parent.append(porterFields);
-
+      var porterFields1 = porterFields.clone();
+      porterParent.append(porterFields1);
       initPhonemask();
     }
   );
@@ -603,22 +652,26 @@ $(document).ready(function () {
 
   //добавление прицепа
 
-  $(".popup-addautos").on("click", ".add-trailer span.ic.add-option", function () {
-    $(this).toggleClass("active remove-option");
-    $(this).parents("form").find(".fields.trailer").toggleClass("active");
-    var inputs = $(this)
-      .parents("form")
-      .find(".fields-item.pallets,.fields-item.dimensions");
-    if ($(this).hasClass("active")) {
-      $(this).parents(".add-trailer").find(".add-text").hide();
-      $(this).parents(".add-trailer").find(".hidden-text").show();
-      inputs.find("input").attr("disabled", true);
-    } else {
-      $(this).parents(".add-trailer").find(".add-text").show();
-      $(this).parents(".add-trailer").find(".hidden-text").hide();
-      inputs.find("input").attr("disabled", false);
+  $(".popup-addautos").on(
+    "click",
+    ".add-trailer span.ic.add-option",
+    function () {
+      $(this).toggleClass("active remove-option");
+      $(this).parents("form").find(".fields.trailer").toggleClass("active");
+      var inputs = $(this)
+        .parents("form")
+        .find(".fields-item.pallets,.fields-item.dimensions");
+      if ($(this).hasClass("active")) {
+        $(this).parents(".add-trailer").find(".add-text").hide();
+        $(this).parents(".add-trailer").find(".hidden-text").show();
+        inputs.find("input").attr("disabled", true);
+      } else {
+        $(this).parents(".add-trailer").find(".add-text").show();
+        $(this).parents(".add-trailer").find(".hidden-text").hide();
+        inputs.find("input").attr("disabled", false);
+      }
     }
-  });
+  );
 
   $(".register-form").on(
     "click",
@@ -645,22 +698,27 @@ $(document).ready(function () {
   );
 
   //добавление автомобилей
+
+  var autoParent = $(".register-form fieldset#autos .add-option.add-car");
+  var autoFields = autoParent
+    .parents("fieldset#autos")
+    .find(".fields")
+    .eq(0)
+    .clone();
+  autoFields.find(".fields-title").remove();
+  autoFields.find(".row.trailer").removeClass("active");
+  autoFields.find(".add-trailer .ic").removeClass("active remove-option");
+  autoFields.find(".add-trailer p").attr("style", "");
+  autoFields.find("input,textarea").val("");
+  autoFields
+    .find(".row.car")
+    .prepend('<div class="remove"><span class="ic delete"></span></div>');
+
   $(".register-form").on("click", ".add-car span.ic.add-option", function () {
-    var parent = $(".register-form fieldset#autos .add-option.add-car");
-    var autoFields = parent
-      .parents("fieldset#autos")
-      .find(".fields")
-      .eq(0)
-      .clone();
-    autoFields.find(".fields-title").remove();
-    autoFields.find(".row.trailer").removeClass("active");
-    autoFields.find(".add-trailer .ic").removeClass("active remove-option");
-    autoFields.find(".add-trailer p").attr("style", "");
-    autoFields.find("input,textarea").val("");
-    autoFields
-      .find(".row.car")
-      .prepend('<div class="remove"><span class="ic delete"></span></div>');
-    parent.before(autoFields);
+    var autoFields1 = autoFields.clone();
+    autoParent.before(autoFields1);
+    photosFiler($(".row.docs:last .attachDocuments.photos input:file"));
+    docsFiler($(".row.docs:last .attachDocuments.docs input:file"));
   });
 
   $(".register-form").on("click", ".row.car span.ic.delete", function () {
@@ -673,4 +731,9 @@ $(document).ready(function () {
     $("#authorise .canHide").hide();
     $("#authorise .canHide." + $(this).val()).show();
   });
+
+  docsFiler($("form .attachDocuments.docs input:file"));
+  photosFiler($("form .attachDocuments.photos input:file"));
+  driverFiler($("form .attachDocuments.driver input:file"));
+  personalFiler($("form .attachDocuments.personal input:file"));
 });

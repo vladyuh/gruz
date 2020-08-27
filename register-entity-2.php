@@ -122,10 +122,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="attach-files drop-area">
-                                <input type="file" name="files" id="" multiple>
-                                <span class="ic files"></span>
-                                <label for="files">Загрузить документ</label>
+                            <div class="fields-item fullwidth attachDocuments docs">
+                                <input type="file" name="companyFiles" id="companyFiles" multiple
+                                    accept=".xlsx,.xls,.doc,.docx,.txt,.pdf">
                             </div>
                             <div class="divider"></div>
                         </fieldset>
@@ -164,11 +163,9 @@
                                                 <label class="grey">Паспорт (Серия номер, кем и дата выдачи)</label>
                                                 <input type="text">
                                             </div>
-                                            <div class="attach-images drop-area">
-                                                <input type="file" name="images" id="" multiple
-                                                       accept="image/png, image/jpeg">
-                                                <span class="ic images"></span>
-                                                <label for="files">Загрузить фото водительского удостоверения</label>
+                                            <div class="fields-item fullwidth attachDocuments driver">
+                                                <input type="file" name="driverFiles" id="driverFiles" multiple
+                                                    accept="image/png, image/jpeg, image/jpg">
                                             </div>
                                         </div>
                                     </div>
@@ -214,7 +211,8 @@
                                                 </div>
                                                 <div class="tooltip">
                                                     <span class="ic info"></span>
-                                                    <p>Ширину и высоту необходимо указывать по <br>проему грузового отсека</p>
+                                                    <p>Ширину и высоту необходимо указывать по <br>проему грузового
+                                                        отсека</p>
                                                 </div>
                                             </div>
                                             <div class="fields-item green">
@@ -252,16 +250,13 @@
                                             </div>
                                         </div>
                                         <div class="row docs">
-                                            <div class="attach-images drop-area">
-                                                <input type="file" name="images" id="" multiple
-                                                    accept="image/png, image/jpeg">
-                                                <span class="ic images"></span>
-                                                <label for="files">Загрузить фото авто</label>
+                                            <div class="fields-item attachDocuments photos">
+                                                <input type="file" name="autoPhotos" id="autoPhotos" multiple
+                                                    accept="image/png, image/jpeg, image/jpg">
                                             </div>
-                                            <div class="attach-files drop-area">
-                                                <input type="file" name="files" id="" multiple>
-                                                <span class="ic files"></span>
-                                                <label for="files">Загрузить документ</label>
+                                            <div class="fields-item attachDocuments docs">
+                                                <input type="file" name="autoDocs" id="autoDocs" multiple
+                                                    accept=".xlsx,.xls,.doc,.docx,.txt,.pdf">
                                             </div>
                                         </div>
                                         <div class="divider"></div>

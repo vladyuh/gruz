@@ -23,4 +23,6 @@
 
 <link rel="stylesheet" href="/css/icon.min.css">
 
+<link href="jfiler/css/jquery.filer.css" rel="stylesheet" />
+
  

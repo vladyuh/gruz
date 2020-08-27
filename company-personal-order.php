@@ -131,7 +131,22 @@
                                             перевозках грузов.pdf
                                             <span>(236 Кб)</span>
                                         </p>
-                                    </a>                                    
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-detail--photos">
+                            <div class="order-detail__block-head">
+                                Фото
+                            </div>
+                            <div class="order-detail__block-content">
+                                <div class="uploadedImages">
+                                    <a data-fancybox="gallery" href="/img/car-image-1b.png" class="uploadedImages-image">
+                                        <img src="/img/uploadedPhotos/car-1.png" alt="">
+                                    </a>
+                                    <a data-fancybox="gallery" href="/img/car-image-2b.png" class="uploadedImages-image">
+                                        <img src="/img/uploadedPhotos/car-2.png" alt="">
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -141,7 +156,8 @@
                         </a>
                     </div>
                     <div class="right">
-                        <div id="order-map" data-route="53.897663, 30.363937;53.912727, 30.320163" data-current="53.910998, 30.326826">
+                        <div id="order-map" data-route="53.897663, 30.363937;53.912727, 30.320163"
+                            data-current="53.910998, 30.326826">
                         </div>
                     </div>
                 </div>
