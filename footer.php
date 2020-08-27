@@ -730,10 +730,6 @@
 
 <script src="/jfiler/js/jquery.filer.min.js" type="text/javascript"></script>
 
-<script src="/js/main.js"></script>
-
-<script src="/js/register.js"></script>
-
 <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate"></script>
 
 <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
@@ -755,6 +751,9 @@
         });
     }
 </script>
+
+
+<script src="/js/main.js"></script>
 
 </body>
 
