@@ -198,6 +198,7 @@
                                     <select name="payment" id=""> 
                                         <option value="cash">Наличными</option>
                                         <option value="bill">Оплата по счету</option>
+                                        <option value="erip">ЕРИП</option>
                                     </select>
                                 </div>
                                 <div class="fields-item prim optional">

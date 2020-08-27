@@ -127,6 +127,21 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="order-detail--photos">
+                            <div class="order-detail__block-head">
+                                Фото
+                            </div>
+                            <div class="order-detail__block-content">
+                                <div class="uploadedImages">
+                                    <a data-fancybox="gallery" href="/img/car-image-1b.png" class="uploadedImages-image">
+                                        <img src="/img/uploadedPhotos/car-1.png" alt="">
+                                    </a>
+                                    <a data-fancybox="gallery" href="/img/car-image-2b.png" class="uploadedImages-image">
+                                        <img src="/img/uploadedPhotos/car-2.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <a href="/client-personal-orders.php" class="back-btn">
                             <span class="ic back"></span>
                             <p>К списку заказов</p>

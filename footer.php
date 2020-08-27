@@ -525,20 +525,26 @@
             </div>
         </div>
         <div class="document-items">
-            <a href="#" download="" class="item">
+            <div class="item">
                 <strong class="item-extension">PDF</strong>
-                <p class="item-filename">
+                <a href="#" download="" class="item-filename">
                     Договор автомобильной перевозки груза.pdf
                     <span>(236 Кб)</span>
-                </p>
-            </a>
-            <a href="#" download="" class="item">
+                </a>
+                <a href="#" class="item-delete">
+                    <span class="ic delete"></span>
+                </a>
+            </div>
+            <div  class="item">
                 <strong class="item-extension">PDF</strong>
-                <p class="item-filename">
+                <a href="#" download="" class="item-filename">
                     Договор автомобильной перевозки груза.pdf
                     <span>(236 Кб)</span>
-                </p>
-            </a>
+                </a>
+                <a href="#" class="item-delete">
+                    <span class="ic delete"></span>
+                </a>
+            </div>
         </div>
         <div class="submit">
             <button class="flat-btn yellow">Сохранить</button>
