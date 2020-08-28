@@ -195,12 +195,6 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <form class="attach-images drop-area">
-                                        <input type="file" name="images" id="" multiple=""
-                                            accept="image/png, image/jpeg">
-                                        <span class="ic images"></span>
-                                        <label for="files">Загрузить фото</label>
-                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -243,41 +237,52 @@
                             </div>
                         </div>
                         <div class="profile-customer--docs profile-contractor--docs">
-                            <div class="profile-customer__block-head">
+                        <div class="profile-customer__block-head">
                                 <div class="title">
                                     Документы
                                 </div>
                             </div>
                             <div class="profile-customer__block-content">
-                                <form class="attach-files drop-area">
-                                    <input type="file" name="files" id="" multiple>
-                                    <span class="ic files"></span>
-                                    <label for="files">Загрузить документ</label>
-                                </form>
                                 <div class="document-items">
-                                    <div class="item">
+                                    <a href="#" download class="item">
                                         <strong class="item-extension">PDF</strong>
                                         <p class="item-filename">
                                             Договор автомобильной перевозки груза.pdf
                                             <span>(236 Кб)</span>
                                         </p>
-                                    </div>
-                                    <div class="item">
+                                    </a>
+                                    <a href="#" download class="item">
+                                        <strong class="item-extension">PDF</strong>
+                                        <p class="item-filename">
+                                            Договор автомобильной перевозки груза.pdf
+                                            <span>(236 Кб)</span>
+                                        </p>
+                                    </a>
+                                    <a href="#" download class="item">
                                         <strong class="item-extension">TXT</strong>
                                         <p class="item-filename">
                                             Договор фрахтования для перевозки.pdf
                                             <span>(236 Кб)</span>
                                         </p>
-                                    </div>
-                                    <div class="item">
+                                    </a>
+                                    <a href="#" download class="item">
                                         <strong class="item-extension">PDF</strong>
                                         <p class="item-filename">
                                             Договор об организации автомобильных перевозок грузов — при систематических
                                             перевозках грузов.pdf
                                             <span>(236 Кб)</span>
                                         </p>
-                                    </div>
+                                    </a>
                                 </div>
+                                <form>
+                                    <div class="fields-item fullwidth attachDocuments personal">
+                                        <input type="file" name="companyFiles2" id="companyFiles2" multiple
+                                            accept=".xlsx,.xls,.doc,.docx,.txt,.pdf">
+                                    </div>
+                                    <div class="submit">
+                                        <button type="submit" class="flat-btn yellow">Сохранить</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

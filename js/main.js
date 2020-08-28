@@ -45,8 +45,7 @@ $(document).ready(function () {
     arrows: false,
     dots: true,
     appendDots: $(".autopark .slider-nav .dots"),
-    responsive: [
-      {
+    responsive: [{
         breakpoint: 1111,
         settings: {
           slidesToShow: 3,
@@ -98,8 +97,7 @@ $(document).ready(function () {
 
   $(".ic.minus").on("click", function () {
     var old = $(this).parents(".input-box").find('input[type="number"]').val();
-    if (old == 0) {
-    } else {
+    if (old == 0) {} else {
       $(this)
         .parents(".input-box")
         .find('input[type="number"]')
@@ -319,8 +317,7 @@ $(document).ready(function () {
 
       if (Math.abs(lastScrollTop - st) <= delta) return;
 
-      if ($(".header-content__m--menu").hasClass("open")) {
-      } else {
+      if ($(".header-content__m--menu").hasClass("open")) {} else {
         if (st > lastScrollTop && st > navbarHeight) {
           $("header").removeClass("nav-down").addClass("nav-up");
         } else {
@@ -338,21 +335,21 @@ $(document).ready(function () {
 
   //Загрузка файлов
 
-  $("body").on("dragenter click", '.drop-area input[type="file"]', function () {
-    var parent = $(this).parents(".drop-area");
+  /* $("body").on("dragenter click", '.jFiler-input-dragDrop', function () {
+    var parent = $(this);
     parent.addClass("is-active");
   });
 
   $("body").on(
     "dragleave blur drop",
-    '.drop-area input[type="file"]',
+    '.jFiler-input-dragDrop',
     function () {
-      var parent = $(this).parents(".drop-area");
+      var parent = $(this);
       parent.removeClass("is-active");
     }
-  );
+  ); */
 
-  $("body").on("change", '.drop-area input[type="file"]', function () {
+  /* $("body").on("change", '.drop-area input[type="file"]', function () {
     var parent = $(this).parents(".drop-area");
 
     var filesCount = $(this).prop("files").length;
@@ -364,7 +361,7 @@ $(document).ready(function () {
     } else {
       textContainer.text(filesCount + " файла(ов) выбрано");
     }
-  });
+  }); */
 
   $("#status").change(function () {
     $(this).parents("form").submit();
@@ -519,8 +516,7 @@ $(document).ready(function () {
       });
 
       // Создание экземпляра маршрута.
-      multiRoute = new ymaps.multiRouter.MultiRoute(
-        {
+      multiRoute = new ymaps.multiRouter.MultiRoute({
           // Точки маршрута.
           // Обязательное поле.
           referencePoints: referencePoints,
@@ -586,10 +582,19 @@ $(document).ready(function () {
       showThumbs: true,
       addMore: true,
       allowDuplicates: false,
-      changeInput:
-        '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic files"></span> <span class="caption">Загрузить документ</span></div></div></div>',
+      dragDrop: {
+        dragEnter: null,
+        dragLeave: null,
+        drop: null,
+        dragContainer: null,
+      },
+      changeInput: '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic files"></span> <span class="caption">Загрузить документ</span></div></div></div>',
+      extensions: ['xlsx', 'xls', 'doc', 'docx', 'txt', 'pdf'],
       captions: {
         removeConfirmation: "Вы действительно хотите удалить этот файл?",
+        errors: {
+          filesType: "Загрузить можно только документы (.xlsx,.xls,.doc,.docx,.txt,.pdf)",
+        }
       },
     });
   }
@@ -602,8 +607,20 @@ $(document).ready(function () {
       captions: {
         removeConfirmation: "Вы действительно хотите удалить этот файл?",
       },
-      changeInput:
-        '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic images"></span> <span class="caption">Загрузить фото авто</span></div></div></div>',
+      dragDrop: {
+        dragEnter: null,
+        dragLeave: null,
+        drop: null,
+        dragContainer: null,
+      },
+      changeInput: '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic images"></span> <span class="caption">Загрузить фото авто</span></div></div></div>',
+      extensions: ['jpg', 'png', 'jpeg'],
+      captions: {
+        removeConfirmation: "Вы действительно хотите удалить этот файл?",
+        errors: {
+          filesType: "Загрузить можно только фото (.png,.jpg,.jpeg)",
+        }
+      },
     });
   }
 
@@ -615,8 +632,20 @@ $(document).ready(function () {
       captions: {
         removeConfirmation: "Вы действительно хотите удалить этот файл?",
       },
-      changeInput:
-        '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic images"></span> <span class="caption">Загрузить фото водительского удостоверения</span></div></div></div>',
+      dragDrop: {
+        dragEnter: null,
+        dragLeave: null,
+        drop: null,
+        dragContainer: null,
+      },
+      changeInput: '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic images"></span> <span class="caption">Загрузить фото водительского удостоверения</span></div></div></div>',
+      extensions: ['jpg', 'png', 'jpeg'],
+      captions: {
+        removeConfirmation: "Вы действительно хотите удалить этот файл?",
+        errors: {
+          filesType: "Загрузить можно только фото (.png,.jpg,.jpeg)",
+        }
+      },
     });
   }
 
@@ -629,13 +658,25 @@ $(document).ready(function () {
       captions: {
         removeConfirmation: "Вы действительно хотите удалить этот файл?",
       },
-      changeInput:
-        '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic files"></span> <span class="caption">Загрузить документ</span></div></div></div>',
+      dragDrop: {
+        dragEnter: null,
+        dragLeave: null,
+        drop: null,
+        dragContainer: null,
+      },
+      changeInput: '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic files"></span> <span class="caption">Загрузить документ</span></div></div></div>',
       onEmpty: function () {
         parent.find(".submit").hide();
       },
       onSelect: function () {
         parent.find(".submit").show();
+      },
+      extensions: ['xlsx', 'xls', 'doc', 'docx', 'txt', 'pdf'],
+      captions: {
+        removeConfirmation: "Вы действительно хотите удалить этот файл?",
+        errors: {
+          filesType: "Загрузить можно только документы (.xlsx,.xls,.doc,.docx,.txt,.pdf)",
+        }
       },
     });
   }

@@ -133,12 +133,10 @@
     <div class="popup-title">Добавить фото</div>
     <form action="">
         <div class="fields">
-            <div class="attach-images">
-                <input type="file" name="images" id="gallery-photo-add" multiple="" accept="image/png, image/jpeg">
-                <span class="ic images"></span>
-                <label for="files">Загрузить фото</label>
+            <div class="fields-item attachDocuments photos">
+                <input type="file" name="autoPhotos4" id="autoPhotos4" multiple
+                    accept="image/png, image/jpeg, image/jpg">
             </div>
-            <div class="attach-images__preview"></div>
         </div>
         <div class="submit">
             <button class="flat-btn yellow">Отправить</button>
@@ -710,10 +708,6 @@
         <a href="javascript:$.fancybox.close()" class="flat-btn yellow">Закрыть</a>
     </div>
 </div>
-
-
-
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
