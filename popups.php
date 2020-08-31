@@ -26,6 +26,7 @@
                     <a href="#order-accept" data-fancybox class="flat-btn yellow">Попап заказа</a>
                     <a href="#order-success" data-fancybox class="flat-btn yellow">Попап успешного заказа (неавторизован)</a>
                     <a href="#order-success-1" data-fancybox class="flat-btn yellow">Попап успешного заказа (авторизован)</a>
+                    <a href="#order-success-2" data-fancybox class="flat-btn yellow">Попап успешного заказа (как можно быстрее)</a>
                     <a href="#reg-success" data-fancybox class="flat-btn yellow">Попап успешной регистрации</a>
                 </div>
             </div>

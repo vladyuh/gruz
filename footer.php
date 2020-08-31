@@ -142,7 +142,6 @@
             <button class="flat-btn yellow">Отправить</button>
         </div>
     </form>
-
 </div>
 
 <div id="send-contract" class="popup" style="display:none">
@@ -339,6 +338,18 @@
     <div class="popup-title">Спасибо, ваш заказ успешно создан!</div>
     <div class="popup-desc">
         <p>За час до подачи автомобиля вам придет sms-сообщение с информацией об автомобиле и о водителе.</p>
+        <br>
+        <p>Возможность отслеживания заказа доступна в Личном кабинете.</p>
+    </div>
+    <div class="submit">
+        <a href="javascript:$.fancybox.close();" class="flat-btn yellow">Закрыть</a>
+    </div>
+</div>
+
+<div id="order-success-2" class="popup popup-order" style="display:none">
+    <div class="popup-title">Спасибо, ваш заказ успешно создан!</div>
+    <div class="popup-desc">
+        <p>В ближайшее время вам придет sms-сообщение с информацией об автомобиле и водителе.</p>
         <br>
         <p>Возможность отслеживания заказа доступна в Личном кабинете.</p>
     </div>
