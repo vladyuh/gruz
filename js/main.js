@@ -130,9 +130,9 @@ $(document).ready(function () {
       $(this).addClass("active");
     }
   });
-/*
+
   $(".register-form .form-tabs__tab").hide();
-  $(".register-form .form-tabs__tab:first").show();*/
+  $(".register-form .form-tabs__tab:first").show();
 
   //Активация полей "Грузчики" на главной
 
@@ -683,20 +683,11 @@ $(document).ready(function () {
 
   //добавления водителей
 
-  $(".register-form").on(
-      "click",
-      ".add-drivers span.ic.add-option",
-      function () {
-        var parent = $(".register-form fieldset#drivers .fields");
-        var driverFields = parent.find(".row.drivers").eq(0).clone();
-        driverFields.find("input,textarea").val("");
-        driverFields.prepend(
-            '<div class="remove"><span class="ic delete"></span></div>'
-        );
-        parent.append(driverFields);
-
-        initPhonemask();
-      }
+  var driverParent = $(".register-form fieldset#drivers .fields");
+  var driverFields = driverParent.find(".row.drivers").eq(0).clone();
+  driverFields.find("input,textarea").val("");
+  driverFields.prepend(
+    '<div class="remove"><span class="ic delete"></span></div>'
   );
 
   $(".register-form").on(
@@ -716,24 +707,15 @@ $(document).ready(function () {
 
   //добавления грузчиков
 
-  $(".register-form").on(
-      "click",
-      ".add-porters span.ic.add-option",
-      function () {
-        var parent = $(".register-form fieldset#porters .fields");
-        var porterFields = parent
-            .parents("fieldset#porters")
-            .find(".row.porters")
-            .eq(0)
-            .clone();
-        porterFields.find("input,textarea").val("");
-        porterFields.prepend(
-            '<div class="remove"><span class="ic delete"></span></div>'
-        );
-        parent.append(porterFields);
-
-        initPhonemask();
-      }
+  var porterParent = $(".register-form fieldset#porters .fields");
+  var porterFields = porterParent
+    .parents("fieldset#porters")
+    .find(".row.porters")
+    .eq(0)
+    .clone();
+  porterFields.find("input,textarea").val("");
+  porterFields.prepend(
+    '<div class="remove"><span class="ic delete"></span></div>'
   );
 
   $(".register-form").on(
@@ -752,30 +734,25 @@ $(document).ready(function () {
 
   //добавление прицепа
 
-  $(".register-form").on(
-      "click",
-      ".add-trailer span.ic.add-option",
-      function () {
-        $(this).toggleClass("active remove-option");
-        $(this)
-            .parents("#autos .fields")
-            .find(".row.trailer")
-            .toggleClass("active");
-        var inputs = $(this)
-            .parents(".fields")
-            .find(".fields-item.pallets,.fields-item.dimensions");
-        if ($(this).hasClass("active")) {
-          $(this).parents(".fields").find('input[name="needTrailer[]"]').val(1);
-          $(this).parents(".add-trailer").find(".add-text").hide();
-          $(this).parents(".add-trailer").find(".hidden-text").show();
-          inputs.find("input").attr("disabled", true);
-        } else {
-          $(this).parents(".fields").find('input[name="needTrailer[]"]').val(0);
-          $(this).parents(".add-trailer").find(".add-text").show();
-          $(this).parents(".add-trailer").find(".hidden-text").hide();
-          inputs.find("input").attr("disabled", false);
-        }
+  $(".popup-addautos").on(
+    "click",
+    ".add-trailer span.ic.add-option",
+    function () {
+      $(this).toggleClass("active remove-option");
+      $(this).parents("form").find(".fields.trailer").toggleClass("active");
+      var inputs = $(this)
+        .parents("form")
+        .find(".fields-item.pallets,.fields-item.dimensions");
+      if ($(this).hasClass("active")) {
+        $(this).parents(".add-trailer").find(".add-text").hide();
+        $(this).parents(".add-trailer").find(".hidden-text").show();
+        inputs.find("input").attr("disabled", true);
+      } else {
+        $(this).parents(".add-trailer").find(".add-text").show();
+        $(this).parents(".add-trailer").find(".hidden-text").hide();
+        inputs.find("input").attr("disabled", false);
       }
+    }
   );
 
   $(".register-form").on(
@@ -804,24 +781,20 @@ $(document).ready(function () {
 
   //добавление автомобилей
 
-  $(".register-form").on("click", ".add-car span.ic.add-option", function () {
-    var parent = $(".register-form fieldset#autos .add-option.add-car");
-    var autoFields = parent
-        .parents("fieldset#autos")
-        .find(".fields")
-        .eq(0)
-        .clone();
-    autoFields.find(".fields-title").remove();
-    autoFields.find(".row.trailer").removeClass("active");
-    autoFields.find(".add-trailer .ic").removeClass("active remove-option");
-    autoFields.find(".add-trailer p").attr("style", "");
-    autoFields.find("input,textarea").val("");
-    autoFields.find('input[name="needTrailer[]"]').val(0);
-    autoFields
-        .find(".row.car")
-        .prepend('<div class="remove"><span class="ic delete"></span></div>');
-    parent.before(autoFields);
-  });
+  var autoParent = $(".register-form fieldset#autos .add-option.add-car");
+  var autoFields = autoParent
+    .parents("fieldset#autos")
+    .find(".fields")
+    .eq(0)
+    .clone();
+  autoFields.find(".fields-title").remove();
+  autoFields.find(".row.trailer").removeClass("active");
+  autoFields.find(".add-trailer .ic").removeClass("active remove-option");
+  autoFields.find(".add-trailer p").attr("style", "");
+  autoFields.find("input,textarea").val("");
+  autoFields
+    .find(".row.car")
+    .prepend('<div class="remove"><span class="ic delete"></span></div>');
 
   $(".register-form").on("click", ".add-car span.ic.add-option", function () {
     var autoFields1 = autoFields.clone();
