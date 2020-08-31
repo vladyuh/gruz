@@ -766,6 +766,7 @@ $(document).ready(function () {
         .toggleClass("active");
       var inputs = $(this)
         .parents(".fields")
+        .find('.trailer')
         .find(".fields-item.pallets,.fields-item.dimensions");
       if ($(this).hasClass("active")) {
         $(this).parents(".add-trailer").find(".add-text").hide();
