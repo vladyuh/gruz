@@ -623,62 +623,113 @@ $(document).ready(function () {
       },
     });
   }
+  function docsFiler(elem) {
+    if(elem.length)
+      elem.filer({
+        showThumbs: true,
+        addMore: true,
+        allowDuplicates: false,
+        dragDrop: {
+          dragEnter: null,
+          dragLeave: null,
+          drop: null,
+          dragContainer: null,
+        },
+        changeInput: '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic files"></span> <span class="caption">Загрузить документ</span></div></div></div>',
+        extensions: ['xlsx', 'xls', 'doc', 'docx', 'txt', 'pdf'],
+        captions: {
+          removeConfirmation: "Вы действительно хотите удалить этот файл?",
+          errors: {
+            filesType: "Загрузить можно только документы (.xlsx,.xls,.doc,.docx,.txt,.pdf)",
+          }
+        },
+      });
+  }
+
+  function photosFiler(elem) {
+    if(elem.length)
+      elem.filer({
+        showThumbs: true,
+        addMore: true,
+        allowDuplicates: false,
+        captions: {
+          removeConfirmation: "Вы действительно хотите удалить этот файл?",
+        },
+        dragDrop: {
+          dragEnter: null,
+          dragLeave: null,
+          drop: null,
+          dragContainer: null,
+        },
+        changeInput: '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic images"></span> <span class="caption">Загрузить фото авто</span></div></div></div>',
+        extensions: ['jpg', 'png', 'jpeg'],
+        captions: {
+          removeConfirmation: "Вы действительно хотите удалить этот файл?",
+          errors: {
+            filesType: "Загрузить можно только фото (.png,.jpg,.jpeg)",
+          }
+        },
+      });
+  }
 
   function driverFiler(elem) {
-    elem.filer({
-      showThumbs: true,
-      addMore: true,
-      allowDuplicates: false,
-      captions: {
-        removeConfirmation: "Вы действительно хотите удалить этот файл?",
-      },
-      dragDrop: {
-        dragEnter: null,
-        dragLeave: null,
-        drop: null,
-        dragContainer: null,
-      },
-      changeInput: '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic images"></span> <span class="caption">Загрузить фото водительского удостоверения</span></div></div></div>',
-      extensions: ['jpg', 'png', 'jpeg'],
-      captions: {
-        removeConfirmation: "Вы действительно хотите удалить этот файл?",
-        errors: {
-          filesType: "Загрузить можно только фото (.png,.jpg,.jpeg)",
-        }
-      },
-    });
+    if(elem.length)
+      elem.filer({
+        showThumbs: true,
+        addMore: true,
+        allowDuplicates: false,
+        captions: {
+          removeConfirmation: "Вы действительно хотите удалить этот файл?",
+        },
+        dragDrop: {
+          dragEnter: null,
+          dragLeave: null,
+          drop: null,
+          dragContainer: null,
+        },
+        changeInput: '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic images"></span> <span class="caption">Загрузить фото водительского удостоверения</span></div></div></div>',
+        extensions: ['jpg', 'png', 'jpeg'],
+        captions: {
+          removeConfirmation: "Вы действительно хотите удалить этот файл?",
+          errors: {
+            filesType: "Загрузить можно только фото (.png,.jpg,.jpeg)",
+          }
+        },
+      });
   }
 
   function personalFiler(elem) {
-    var parent = elem.parents(".profile-customer--docs");
-    elem.filer({
-      showThumbs: true,
-      addMore: true,
-      allowDuplicates: false,
-      captions: {
-        removeConfirmation: "Вы действительно хотите удалить этот файл?",
-      },
-      dragDrop: {
-        dragEnter: null,
-        dragLeave: null,
-        drop: null,
-        dragContainer: null,
-      },
-      changeInput: '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic files"></span> <span class="caption">Загрузить документ</span></div></div></div>',
-      onEmpty: function () {
-        parent.find(".submit").hide();
-      },
-      onSelect: function () {
-        parent.find(".submit").show();
-      },
-      extensions: ['xlsx', 'xls', 'doc', 'docx', 'txt', 'pdf'],
-      captions: {
-        removeConfirmation: "Вы действительно хотите удалить этот файл?",
-        errors: {
-          filesType: "Загрузить можно только документы (.xlsx,.xls,.doc,.docx,.txt,.pdf)",
-        }
-      },
-    });
+    if(elem.length) {
+      var parent = elem.parents(".profile-customer--docs");
+      elem.filer({
+        showThumbs: true,
+        addMore: true,
+        allowDuplicates: false,
+        captions: {
+          removeConfirmation: "Вы действительно хотите удалить этот файл?",
+        },
+        dragDrop: {
+          dragEnter: null,
+          dragLeave: null,
+          drop: null,
+          dragContainer: null,
+        },
+        changeInput: '<div class="jFiler-input-dragDrop"><div class="jFiler-input-inner"><div class="jFiler-input-text"><span class="ic files"></span> <span class="caption">Загрузить документ</span></div></div></div>',
+        onEmpty: function () {
+          parent.find(".submit").hide();
+        },
+        onSelect: function () {
+          parent.find(".submit").show();
+        },
+        extensions: ['xlsx', 'xls', 'doc', 'docx', 'txt', 'pdf'],
+        captions: {
+          removeConfirmation: "Вы действительно хотите удалить этот файл?",
+          errors: {
+            filesType: "Загрузить можно только документы (.xlsx,.xls,.doc,.docx,.txt,.pdf)",
+          }
+        },
+      });
+    }
   }
 
   //добавления водителей
