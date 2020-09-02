@@ -1138,8 +1138,10 @@ a.back-btn {
       color: #d8d8d8;
     }
 
-    input {
+    .form-group {
       width: 30% !important;
+    }
+    input {
       border: 0 !important;
       text-align: center;
     }
@@ -1300,12 +1302,13 @@ a.back-btn {
   .fields.files {
     display: flex;
 
-    .form-group,
+    .form-group{
+      width: calc(50% - 12px);
+    }
     .drop-area {
       flex-direction: row;
       display: flex;
       align-items: center;
-      width: calc(50% - 12px);
     }
 
     label {
