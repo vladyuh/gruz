@@ -943,7 +943,8 @@ a.back-btn {
   .fields-item {
     margin-bottom: 15px;
 
-    input {
+    input,
+    select {
       height: 50px !important;
     }
   }
@@ -1141,6 +1142,7 @@ a.back-btn {
     .form-group {
       width: 30% !important;
     }
+
     input {
       border: 0 !important;
       text-align: center;
@@ -1302,9 +1304,10 @@ a.back-btn {
   .fields.files {
     display: flex;
 
-    .form-group{
+    .form-group {
       width: calc(50% - 12px);
     }
+
     .drop-area {
       flex-direction: row;
       display: flex;
@@ -1348,11 +1351,11 @@ form {
       height: 75px;
       position: relative;
 
-      input[type="checkbox"]:checked ~ a{
+      input[type="checkbox"]:checked~a {
         opacity: 1;
         pointer-events: all;
       }
-      
+
       img {
         width: 100%;
         height: 100%;

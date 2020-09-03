@@ -180,6 +180,17 @@
                                     <div class="fields">
                                         <div class="fields-title">Автопарк</div>
                                         <div class="row car">
+                                            <div class="fields-item green fullwidth">
+                                                <label class="grey">Тип транспорта</label>
+                                                <select name="" id="">
+                                                    <option value>Выберите</option>
+                                                    <option value="tent">Тентованный</option>
+                                                    <option value="refr">Рефрижератор</option>
+                                                    <option value="bort">Бортовой</option>
+                                                    <option value="furg">Фургон</option>
+                                                    <option value="tkmu">Техника КМУ</option>
+                                                </select>
+                                            </div>
                                             <div class="fields-item green">
                                                 <label class="grey">Номер машины</label>
                                                 <input type="text">

@@ -215,6 +215,17 @@
     <div class="popup-title">Добавить автомобиль</div>
     <form action="">
         <div class="fields car">
+            <div class="fields-item fullwidth">
+                <label class="grey">Тип транспорта</label>
+                <select name="" id="">
+                    <option value>Выберите</option>
+                    <option value="tent">Тентованный</option>
+                    <option value="refr">Рефрижератор</option>
+                    <option value="bort">Бортовой</option>
+                    <option value="furg">Фургон</option>
+                    <option value="tkmu">Техника КМУ</option>
+                </select>
+            </div>
             <div class="fields-item">
                 <label for="">номер машины</label>
                 <input type="text" name="" id="">
@@ -435,6 +446,17 @@
     <div class="popup-title">Редактирование данных</div>
     <form action="">
         <div class="fields car">
+            <div class="fields-item fullwidth">
+                <label class="grey">Тип транспорта</label>
+                <select name="" id="">
+                    <option value>Выберите</option>
+                    <option value="tent">Тентованный</option>
+                    <option value="refr">Рефрижератор</option>
+                    <option value="bort">Бортовой</option>
+                    <option value="furg">Фургон</option>
+                    <option value="tkmu">Техника КМУ</option>
+                </select>
+            </div>
             <div class="fields-item">
                 <label for="">номер машины</label>
                 <input type="text" name="" id="" value="4658 AX-3">
@@ -544,7 +566,7 @@
                     <span class="ic delete"></span>
                 </a>
             </div>
-            <div  class="item">
+            <div class="item">
                 <strong class="item-extension">PDF</strong>
                 <a href="#" download="" class="item-filename">
                     Договор автомобильной перевозки груза.pdf
