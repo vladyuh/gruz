@@ -312,7 +312,7 @@
 </div>
 
 <div id="order-accept" class="popup popup-order" style="display:none">
-    <div class="popup-title">Заказ на перевозку успешно создан!</div>
+    <div class="popup-title">Подтверждение заказа</div>
     <div class="popup-desc">
         <p>За час до подачи автомобиля вам придет sms-сообщение с информацией о водителе.</p>
     </div>
