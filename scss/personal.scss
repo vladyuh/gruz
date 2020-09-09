@@ -755,6 +755,10 @@
 
 }
 
+.profile-orders__table .empty{
+    display: none;
+}
+
 @media screen and (max-width: 1110px) {
 
     .company-orders {
@@ -776,10 +780,6 @@
 
         }
 
-    }
-
-    .profile-orders__table .empty{
-        display: none;
     }
     
     .profile-orders__table .table__row.active .table__cell:first-child::after {
