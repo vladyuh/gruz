@@ -778,6 +778,10 @@
 
     }
 
+    .profile-orders__table .empty{
+        display: none;
+    }
+    
     .profile-orders__table .table__row.active .table__cell:first-child::after {
         display: none;
     }
