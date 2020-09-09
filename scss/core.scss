@@ -2572,3 +2572,7 @@ input:checked+.slider:before {
   }
 
 }
+
+.sort-desc{
+  transform: rotate(180deg);
+}
