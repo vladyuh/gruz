@@ -1645,8 +1645,10 @@ form {
     border-radius: 0 !important;
   }
 
-  .rating {
+  div[role=radiogroup]{
     max-width: 250px;
+    display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     margin: 0 auto;
     margin-bottom: 35px;
@@ -2251,11 +2253,6 @@ input:checked+.slider:before {
 }
 
 //оценка
-
-.rating {
-  display: flex;
-  flex-direction: row-reverse;
-}
 
 .rating span {
   position: relative;
