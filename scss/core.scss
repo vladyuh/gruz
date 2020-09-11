@@ -917,7 +917,7 @@ a.back-btn {
 .popup {
   background: #fff;
   padding: 51px 74px 54px;
-  max-width: 452.53px!important;
+  max-width: 452.53px !important;
   width: 100%;
 
   &-title {
@@ -1007,7 +1007,7 @@ a.back-btn {
 .popup-message,
 .popup-order,
 .popup-register {
-  max-width: 515px!important;
+  max-width: 515px !important;
   padding: 45px;
 
   .popup-title {
@@ -1097,14 +1097,14 @@ a.back-btn {
   .popup-adddriver,
   .popup-addautos,
   .popup.wide {
-    max-width: 718px!important;
+    max-width: 718px !important;
   }
 }
 
 .popup-adddriver,
 .popup-addautos,
 .popup.wide {
-  max-width: 718px!important;
+  max-width: 718px !important;
 
   .submit {
     max-width: 302px;
@@ -1645,7 +1645,7 @@ form {
     border-radius: 0 !important;
   }
 
-  div[role=radiogroup]{
+  div[role=radiogroup] {
     max-width: 250px;
     display: flex;
     flex-direction: row-reverse;
@@ -2570,6 +2570,94 @@ input:checked+.slider:before {
 
 }
 
-.sort-desc{
+.sort-desc {
   transform: rotate(180deg);
+}
+
+.notFound {
+  display: flex;
+  min-height: calc(100vh - 77px - 136px);
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 43px;
+    color: #000000;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  .desc {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: #808080;
+    margin-bottom: 38px;
+  }
+
+  .flat-btn {
+    padding: 16px;
+    width: 214px;
+    display: block;
+  }
+
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+
+  .flat-btn {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  li {
+    margin: 0 5px;
+
+    &.dots {
+      pointer-events: none;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    &.active,
+    &:hover {
+      span {
+        color: #00982f;
+      }
+
+      a {
+        text-decoration: none;
+        color: #00982f;
+      }
+    }
+
+    span,
+    a {
+      color: #c0c0c0;
+    }
+  }
+
 }
