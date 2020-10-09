@@ -2151,8 +2151,7 @@ input:checked+.slider:before {
     background: #f8f8f8;
   }
 
-  .table__head .table__cell:first-child .table__cell-content,
-  .table__head .table__cell:nth-child(n + 4) .table__cell-content {
+  .table__head .table__cell .table__cell-content{
     justify-content: center;
     text-align: center;
   }
