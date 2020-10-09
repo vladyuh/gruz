@@ -738,19 +738,6 @@
             color: #A9A9A9;
         }
 
-        &.auto,
-        &.driver,
-        &.mover {
-            text-align: left !important;
-
-            .table__cell-content {
-                justify-content: flex-start !important;
-            }
-
-
-        }
-
-
     }
 
 }
@@ -781,7 +768,7 @@
         }
 
     }
-    
+
     .profile-orders__table .table__row.active .table__cell:first-child::after {
         display: none;
     }
