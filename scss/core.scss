@@ -10,7 +10,7 @@ body {
   font-family: "Gilroy";
   display: flex;
   flex-direction: column;
-
+  
   &.fixed {
     overflow: hidden;
   }
@@ -1574,14 +1574,14 @@ form {
     color: #a9a9a9;
     position: absolute;
     top: 0px;
-    left: 13px;
+    left: 5px;
     background: transparent;
-    padding: 0 10px 0 7px;
+    padding: 0 5px 0 5px;
     z-index: 1;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    max-width: 90%;
+    max-width: 95%;
   }
 
   .fields-item label:not(.switch)::after {
@@ -2661,4 +2661,98 @@ input:checked+.slider:before {
     }
   }
 
+}
+
+.loading{
+
+  .transition-loader{
+    display: block;
+  }
+
+}
+
+
+.transition-loader {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 6;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.transition-loader-inner {
+  transform: translate(-50%,-50%);
+  top: 50%;
+  position: absolute;
+  width: calc(100% - 200px);
+  color: #FFF;
+  padding: 0 100px;
+  text-align: center;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  label {
+    margin: 0 10px;
+    opacity: 0;
+    display: inline-block;
+    &:after {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #00982f;
+    }
+  }
+}
+
+$key-frames-ms: 600ms, 500ms, 400ms, 300ms, 200ms, 100ms; 
+
+@each $current-ms in $key-frames-ms {
+    $i: index($key-frames-ms, $current-ms);
+    .transition-loader-inner label:nth-child(#{$i}) {
+      -webkit-animation: loader 3s $current-ms infinite ease-in-out;
+      animation: loader 3s $current-ms infinite ease-in-out;
+    }   
+}
+
+@keyframes loader {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px) scale(1);
+  }
+  33% {
+    opacity: 1;
+    transform: translateX(0px) scale(2);
+  }
+  66% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(300px) scale(2);
+  }
+}
+
+@-webkit-keyframes loader {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+  }
+  33% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+  66% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(300px);
+  }
 }

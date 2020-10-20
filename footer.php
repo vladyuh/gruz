@@ -742,6 +742,17 @@
     </div>
 </div>
 
+<div class="transition-loader">
+  <div class="transition-loader-inner">
+    <label></label>
+    <label></label>
+    <label></label>
+    <label></label>
+    <label></label>
+    <label></label>
+  </div>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 

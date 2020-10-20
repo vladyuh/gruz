@@ -43,6 +43,10 @@
                                 Предлагаем грузоперевозки по Могилеву и области для юридических лиц на индивидуальных
                                 условиях с учетом потребностей вашего бизнеса
                             </div>
+                            <div class="banner-btns">
+                                <a href="#clients-form" class="flat-btn yellow">Оставить заявку</a>
+                                <a href="#authorise" data-fancybox class="flat-btn yellow-outline">Войти в Личный кабинет</a>
+                            </div>
                         </div>
                         <div class="right">
                             <div class="banner-image">
@@ -89,7 +93,7 @@
                         </div>
                         <div class="column">
                             <div class="submit">
-                                <button class="flat-btn yellow">Заказать</button>
+                                <button class="flat-btn yellow">Оставить заявку</button>
                             </div>
                             <div class="agreement">
                                 Нажимая на кнопку, я принимаю соглашение на

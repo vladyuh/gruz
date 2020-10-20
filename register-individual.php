@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="/css/register.min.css">
 
 <?php
-    require_once "header.php";
+    require_once "header-2.php";
 ?>
 
     <main>
