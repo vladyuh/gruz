@@ -413,6 +413,15 @@ li.flex-menu {
   display: none;
 }
 
+.banner-btns{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.banner-btns .flat-btn{
+  margin-right: 10px;
+}
+
 .consult {
   padding: 120px 0 81px;
   background: url(/img/images/form.png), url(/img/images/form-back.png);

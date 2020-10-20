@@ -259,6 +259,10 @@ section.commerce {
 
 @media screen and (max-width: 1110px) {
 
+    .clients-banner .profile{
+        display: none;
+    }
+
     .clients-form__content {
         flex-wrap: wrap;
 
@@ -431,6 +435,10 @@ section.commerce {
 }
 
 @media screen and (max-width: 480px) {
+
+    .clients-banner .banner-btns{
+        display: none;
+    }
 
     .clients-form {
         position: fixed;

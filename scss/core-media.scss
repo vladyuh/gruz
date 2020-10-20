@@ -338,6 +338,15 @@
 }
 
 @media screen and (max-width: 1000px) {
+
+  .banner-btns{
+    justify-content: center;
+  }
+
+  .banner-btns .flat-btn{
+    margin: 0 5px !important;
+  }
+
   .about {
     background-size: 45%;
     background-position-x: left;

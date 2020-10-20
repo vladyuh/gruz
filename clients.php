@@ -44,8 +44,8 @@
                                 условиях с учетом потребностей вашего бизнеса
                             </div>
                             <div class="banner-btns">
-                                <a href="#clients-form" class="flat-btn yellow">Оставить заявку</a>
-                                <a href="#authorise" data-fancybox class="flat-btn yellow-outline">Войти в Личный кабинет</a>
+                                <a href="#clientsForm" class="flat-btn yellow">Оставить заявку</a>
+                                <a href="#authorise" data-fancybox class="flat-btn yellow-outline profile">Войти в Личный кабинет</a>
                             </div>
                         </div>
                         <div class="right">
@@ -58,7 +58,7 @@
             </div>
         </section>
 
-        <div class="clients-form">
+        <div class="clients-form" id="clientsForm">
             <div class="wrapper">
                 <div class="inner">
                 <a href="#clients-form" data-fancybox class="calculate-toggle">
