@@ -137,7 +137,7 @@
                                     <input type="datetime" name="datetime" value="24.03,17:00">
                                 </div>
                                 <div class="fields-item duration">
-                                    <label class="tooltip">Длительность(ч)</label>
+                                    <label class="tooltip" title="Длительность указывается для транспортировки груза только по городу. Стоимость перевозки груза рассчитывается вне города по километражу">Длительность(ч)</label>
                                     <div class="input-box">
                                         <span class="ic minus"></span>
                                         <input type="number" name="duration" min="1" value="1">
