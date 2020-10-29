@@ -322,6 +322,12 @@
         padding-bottom: 20px;
     }
 
+    &__buttons{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+
     .info-items {
         display: flex;
         flex-wrap: wrap;
@@ -668,6 +674,11 @@
                 &.yellow {
                     background: #f6e646;
                 }
+
+                &.red {
+                    background: #ff0000;
+                }
+
             }
 
             .item-icon img {
@@ -1110,6 +1121,14 @@
         p {
             display: none;
         }
+    }
+
+    .order-detail__buttons{
+        flex-direction: column;
+    }
+
+    .order-detail__buttons a{
+        margin-bottom: 15px;
     }
 
     .profile-company__drivers--list .item-number,
