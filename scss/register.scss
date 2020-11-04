@@ -192,10 +192,7 @@ section.register-transporter {
 .register-form {
 
     .tooltip {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: calc(100% + 25px);
+        margin-top: 10px;
         display: flex;
         width: 309px;
 
